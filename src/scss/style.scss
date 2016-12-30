@@ -1,0 +1,106 @@
+//----------------------------------*\
+// VENDOR
+//----------------------------------*/
+
+@import 'vendor/_external.scss';
+
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+
+@import 'mixins/_position.scss';
+@import 'mixins/_selection.scss';
+@import 'mixins/_vendor.scss';
+@import 'mixins/_other-mixins.scss';
+@import 'mixins/_pet2net.scss';
+@import 'mixins/_fonts.scss';
+
+//----------------------------------*\
+// CONFIG MODULES
+//----------------------------------*/
+
+// Config modules
+@import 'modules/_vars.scss';
+@import 'modules/_clearfix.scss';
+@import 'modules/_defaults.scss';
+@import 'modules/_helper.scss';
+
+//----------------------------------*\
+// PARTIALS
+//----------------------------------*/
+
+@import 'partials/_header.scss';
+@import 'partials/_nav.scss';
+@import 'partials/_nav_edit.scss';
+@import 'partials/_sidebar.scss';
+@import 'partials/_main.scss';
+@import 'partials/_footer.scss';
+@import 'partials/_user_sidebar_left.scss';
+@import 'partials/_user_sidebar_right.scss';
+
+//----------------------------------*\
+// PAGES
+//----------------------------------*/
+
+/*@import 'pages/_about_public.scss';
+@import 'pages/_about_edit.scss';
+@import 'pages/_dog_edit_about.scss';
+@import 'pages/_user_edit_about.scss';
+@import 'pages/_dog_profile_about.scss';
+@import 'pages/_kennel_about.scss';*/
+
+//----------------------------------*\
+// OBJECTS & MODULES
+//----------------------------------*/
+
+@import 'modules/_buttons.scss';
+@import 'modules/_inputs.scss';
+@import 'modules/_lists.scss';
+@import 'modules/_typography.scss';
+@import 'modules/_misc.scss';
+@import 'modules/_app.scss';
+@import 'modules/_dropdown_menus.scss';
+@import 'modules/_dog_menu.scss';
+@import 'modules/_my_network_menu.scss';
+@import 'modules/_general_notification_menu.scss';
+@import 'modules/_chat_menu.scss';
+@import 'modules/_useful_modules.scss';
+
+// Enhancement modules
+@import 'modules/_breakpoints.scss';
+@import 'modules/_print.scss';
+
+//----------------------------------*\
+// MAIN_BODY
+//----------------------------------*/
+
+@import 'main_body/about/_general_dog.scss';
+@import 'main_body/about/_parents.scss';
+@import 'main_body/about/_matting_list.scss';
+@import 'main_body/about/_interested_in.scss';
+@import 'main_body/about/_additional_info.scss';
+@import 'main_body/about/_documents.scss';
+@import 'main_body/about/_general_user.scss';
+@import 'main_body/about/_my_dogs.scss';
+@import 'main_body/about/_puppies_for_sale.scss';
+@import 'main_body/about/_general_business.scss';
+@import 'main_body/about/_team.scss';
+@import 'main_body/about/_your_review.scss';
+@import 'main_body/about/_background.scss';
+@import 'main_body/about/_memberships.scss';
+@import 'main_body/about/_planned_litter.scss';
+
+// DOGS - TAB
+@import 'main_body/dogs/_pets.scss';
+// NETWORK - TAB
+@import 'main_body/network/_network.scss';
+// BLOG - TAB
+@import 'main_body/blog/_blog.scss';
+// SERVICES - TAB
+@import 'main_body/services/_services.scss';
+// FAMILY TREE - TAB
+@import 'main_body/family_tree/_family_tree.scss';
+// GALLERY - TAB
+@import 'main_body/gallery/_gallery.scss';
+
+

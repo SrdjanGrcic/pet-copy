@@ -1,0 +1,60 @@
+#header{
+    .dog_menu{
+        min-width: 205px;
+        li{
+            @include borders(none);
+            border-bottom: 1px solid $dropdown_border;
+            margin: 8px;
+            &:last-of-type{
+                border-bottom: none;
+            }
+            i{
+                background-color: $active_edit_mode;
+                padding: 3px;
+                @include border-radius(50%);
+                color: $white;
+            }
+            &.add_new_dog{
+                font-size: 33px;
+                text-align: center;
+                a{
+                    @include roboto(13px, $active_edit_mode);
+                    vertical-align: middle;
+                }
+                i{
+                    @include borders(none);
+                    margin: 0;
+                    font-size: 40px;
+                    color: $active_edit_mode;
+                    background-color: transparent;
+                }
+            }
+        }
+        span{
+            @include max_width(83px);
+            @include roboto_bold(15px, $main_font_color);
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 10px;
+            vertical-align: middle;
+            word-wrap: normal; //normal break-word
+            overflow-x: hidden;
+            &:first-of-type{
+                @include max_width(45px);
+            }
+            &:last-of-type{
+                @include max_width(51px);
+            }
+            img{
+                @include max_width(45px);
+                @include borders(solid, 3px, $male_dog_background);
+                @include border-radius(50px);
+                //margin: 0 auto;
+            }
+            i{
+                margin-left: 5px;
+                font-size: 13px;
+            }
+        }
+    }
+}

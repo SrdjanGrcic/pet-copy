@@ -1,0 +1,63 @@
+.general_dog{
+    .form-group{
+        label{
+            @include roboto(11px, $inactive_text_color);
+            margin-bottom: 0;
+        }
+        input,
+        textarea{
+            @include roboto(12px, $main_font_color);
+            @include box-shadow(0, 0, 0, 0);
+            height: auto;
+            border: none;
+            border-top: 1px solid $dropdown_border;
+            border-radius: 0;
+            padding: 5px 0 0;
+            &[disabled]{
+                background-color: transparent;
+            }
+        }
+        textarea{
+            border: none;
+        }
+    }
+    .dog_description{
+        p{
+            @include roboto(12px, $main_font_color);
+            margin: 20px auto;
+        }
+    }
+    .matting_dog,
+    .owner_matting_dog{
+        display: inline-block;
+    }
+    .owner_matting_dog{
+        vertical-align: middle;
+    }
+}
+.edit{
+    .general_dog{
+        .form-group{
+            label{
+                @include roboto(11px, $active_edit_mode);
+                &[for=dog_class]{
+                    @include roboto_bold(11px, $inactive_text_color);
+                }
+            }
+            input,
+            textarea{
+                @include roboto(12px, $active_edit_mode);
+                @include box-shadow(0, 0, 0, 0);
+                &:active, &:focus{
+                    outline: none;
+                }
+                &#dog_class{
+                    @include roboto_condensed(13px, $main_font_color);
+                }
+            }
+            textarea{
+                @include placeholder($active_edit_mode);
+            }
+        }
+    }
+}

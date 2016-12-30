@@ -1,0 +1,244 @@
+.puppies_for_sale {
+    h4 {
+        margin: 12px 0 33px !important;
+    }
+    .table-responsive{
+        border: 0;
+        td{
+            vertical-align: middle;
+            padding-top: 8px;
+            padding-bottom: 0;
+            white-space: normal !important;
+            &:first-of-type{
+                text-align: center;
+                p{
+                    @include roboto(12px, $status_red);
+                    margin-bottom: 0
+                }
+            }
+            &:last-of-type{
+                padding: 5px 0 0;
+                width: 85px !important;
+                text-align: center;
+            }
+            .image_with_flag{
+                &.normal{
+                    @media screen and (max-width: 768px) {
+                        width: 45px;
+                    }
+                }
+            }
+            .matting_dog_data,
+            .owner_matting_dog{
+                p{
+                    margin-bottom: 2px;
+                }
+            }
+        }
+    }
+    .professions{
+        >p{
+            margin-bottom: 5px;
+        }
+        &.normal{
+            img{
+                @media screen and (max-width: 1200px) {
+                    @include max-width(18px);
+                }
+            }
+        }
+    }
+    .litter_puppies {
+        position: relative;
+        border-top: 1px solid $dropdown_border;
+        padding: 8px 0;
+        margin: 20px 0 10px 20px;
+        #litter_name {
+            @include max_width(75px);
+            @include border-radius(10px);
+            @include borders(solid, 1px, $active_text_color);
+            background-color: $white;
+            color: $active_text_color;
+            outline: none;
+            padding: 0 7px;
+            position: absolute;
+            top: -9px;
+            left: 0;
+            font-size: 11px;
+        }
+        label {
+            @include roboto(12px, $status_red);
+            font-weight: 400;
+        }
+        .user_professions {
+            display: inline-block;
+            .image_with_flag {
+                display: block;
+            }
+        }
+        .dog_name_title{
+            text-align: center;
+            .name_title {
+                display: block;
+                padding-top: 5px;
+                p:first-of-type{
+                    @include roboto_condensed_light(12px, $main_font_color);
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+    .number_of_puppies{
+        margin-top: 7px;
+        text-align: center;
+        .form-control{
+            &[disabled]{
+                background-color: transparent;
+            }
+        }
+        label, div{
+            padding: 0;
+        }
+        label{
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+        input{
+            @include box-shadow(0, 0, 0, 0);
+            @include border-radius(0);
+            text-align: right;
+            padding: 0;
+            border: none;
+        }
+        p{
+            @include roboto(12px, $status_red);
+        }
+        #number_male_puppies,
+        #number_female_puppies{
+            @include roboto(30px, $inactive_text_color);
+        }
+    }
+    .puppies_for_sale_body {
+
+        p {
+            margin: 0;
+        }
+        td {
+            vertical-align: middle;
+            &:last-of-type {
+                padding: 0;
+            }
+        }
+        .hearth_date {
+            span {
+                &:first-of-type {
+                    color: $active_text_color !important;
+                }
+            }
+        }
+    }
+    .litter{
+        margin-top: 20px;
+        >div{
+            padding: 0;
+        }
+    }
+}
+.edit{
+    .puppies_for_sale{
+        .litter_puppies {
+            margin: 20px 0 10px 42px;
+            #litter_name {
+                @include border-radius(10px);
+                @include borders(solid, 1px, $active_edit_mode);
+                background-color: $active_edit_mode;
+                color: $white;
+            }
+            label {
+                @include roboto(12px, $status_red);
+                font-weight: 400;
+            }
+        }
+        .number_of_puppies{
+            #number_male_puppies{
+                @include roboto(30px, $inactive_text_color);
+            }
+            #number_female_puppies{
+                @include roboto(30px, $active_edit_mode);
+            }
+        }
+        .litter{
+            margin-top: 0;
+            .number_of_puppies{
+                margin-top: 25px;
+                text-align: center;
+            }
+            .dog_name_title{
+                margin-bottom: 5px;
+                vertical-align: top;
+                .name_title{
+                    display: inline-block;
+                    vertical-align: bottom;
+                    p{
+                        &:first-of-type{
+                            @include roboto_condensed_light(12px, $main_font_color);
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .ntb.smallest {
+                        padding: 3px 4px;
+                    }
+                    .form-group{
+                        margin-bottom: 0;
+                        .form-control{
+                            height: auto;
+                        }
+                        input{
+                            @include box-shadow(0, 0, 0, 0);
+                            @include border-radius(0);
+                            padding: 0;
+                            border: none;
+                        }
+                    }
+                }
+                .image_with_flag{
+                    a{
+                        position: relative;
+                        display: inline-block;
+                        &:hover{
+                            &:after{
+                                @include max_width(100%);
+                                @include border-radius(50%);
+                                height: 100%;
+                                font-family: 'FontAwesome';
+                                padding: 10px 0;
+                                font-size: 20px;
+                                content: attr(data-icon);
+                                color: $white;
+                                background-color: $active_edit_mode;
+                                text-align: center;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                @media screen and (max-width: 768px) {
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .token,
+        .ellipse_edit_ntb{
+            @include max_width(45px);
+            display: block;
+            margin: 0 auto 5px;
+        }
+        .ellipse_edit_ntb{
+            @include max_width(54px);
+            line-height: 12px;
+        }
+    }
+}

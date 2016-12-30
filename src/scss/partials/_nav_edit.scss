@@ -1,0 +1,23 @@
+#main{
+    &.edit{
+        .main_menu{
+            ul{
+                li{
+                    a{
+                        &:hover, &.active{
+                            .nav_icon{
+                                background-color: $edit_background;
+                            }
+                            i, .nav_name{
+                                color: $active_edit_mode !important;
+                            }
+                        }
+                        .nav_icon, .nav_name{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

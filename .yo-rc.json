@@ -1,0 +1,8 @@
+{
+  "generator-nswebapp": {
+    "webappname": "pet2Net",
+    "bootstrap": true,
+    "jquery": true,
+    "bowerInstalled": true
+  }
+}

@@ -1,0 +1,1556 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Pet 2 Net</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- bower:css -->
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <!-- endbower -->
+
+        <!-- font awesome -->
+        <link rel="stylesheet" href="../../fonts/font-awesome/css/font-awesome.min.css">
+        <!-- roboto font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:100,100i,300,300i,400,400i,700,700i" rel="stylesheet">
+        <!-- injector:css -->
+        <link rel="stylesheet" href="../../css/style.css">
+        <!-- endinjector -->
+    </head>
+    <body>
+
+        <div id="wrapper" class="">
+            <header id="header">
+                <nav class="navbar navbar-inverse">
+                    <div class="container">
+                        <div class="row">
+                            <div class="header_logo_sector">
+                                <a class="" href="#"><img class="img-responsive" src="../../images/logo.png" alt="PET2NET"></a>
+                            </div>
+                            <div class="header_main_sector_tablet">
+                                <div class="col-sm-12">
+                                    <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="header_main_sector">
+                                <div class="col-sm-9">
+                                    <ul class="nav navbar-nav first_level">
+                                        <li class="timeline">
+                                            <a href="#">MY TIMELINE <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">MY PROFILE <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                            <!-- HOVER MENU ORIGINAL -->
+                                            <ul class="hover_menu select_menu hidden">
+                                                <li><a href="#"><i class="fa fa-eye pull-left" aria-hidden="true"></i>PUBLIC VIEW</a></li>
+                                                <li><a href="#"><i class="fa fa-pencil pull-left" aria-hidden="true"></i>EDIT VIEW</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="active_edit">
+                                            <a href="#" class="" data-toggle="dropdown">MY DOGS <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                            <!-- HOVER MENU -->
+                                            <ul class="hover_menu select_menu hidden">
+                                                <li><a href="#"><i class="fa fa-plus pull-left" aria-hidden="true"></i>ADD A NEW DOG</a>
+                                                </li>
+                                            </ul>
+                                            <!-- DOG MENU -->
+                                            <ul class="hover_menu dog_menu hidden">
+                                                <li>
+                                                    <span><img src="../../images/bred-pit.png" alt="blacky"></span>
+                                                    <span>Hernandezy Lopez</span>
+                                                    <span>
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span><img src="../../images/bred-pit.png" alt="blacky"></span>
+                                                    <span title="Blacky">Blacky</span>
+                                                    <span>
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                    </span>
+                                                </li>
+                                                <li class="add_new_dog">
+                                                    <a href="#"><i class="fa fa-plus-circle pull-left" aria-hidden="true"></i>ADD A NEW DOG</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">MY BUSINESS <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                            <ul class="hover_menu select_menu hidden">
+                                                <li><a href="#"><i class="fa fa-eye pull-left" aria-hidden="true"></i>PUBLIC VIEW</a></li>
+                                                <li><a href="#"><i class="fa fa-pencil pull-left" aria-hidden="true"></i>EDIT VIEW</a></li>
+                                                <li><a href="#"><i class="fa fa-plus pull-left" aria-hidden="true"></i>OPEN YOUR BUSINESS PROFILE</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3">
+                                    <ul class="nav navbar-nav metric">
+                                        <li>
+                                            <a href="#">EN <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                            <ul class="hover_menu select_menu hidden">
+                                                <li><a href="#"><span class="circle pull-left">DE</span>DEUTSCH</a></li>
+                                                <li><a href="#"><span class="circle pull-left">FR</span>FRANCE</a></li>
+                                                <li><a href="#"><span class="circle pull-left">RU</span>RUSSIAN</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">CM <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                            <ul class="hover_menu select_menu hidden">
+                                                <li><a href="#"><span class="circle pull-left">CM</span>SI METRICS</a></li>
+                                                <li><a href="#"><span class="circle pull-left">IN</span>IMPERIAL UNITS</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="header_aside_sector">
+                                <ul class="nav navbar-nav aside_menu">
+                                    <li>
+                                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                                        <span class="abs_circle notification">11</span>
+                                        <!-- MY NETWORK MENU -->
+                                        <ul class="hover_menu my_network_menu hidden">
+                                            <li>
+                                                <span class="dm-heading">Invite contacts</span>
+                                                <div class="dm-social">
+                                                    <span class="circle"><a href="#"><i class="fa fa-at" aria-hidden="true"></i></a></span>
+                                                    <span class="circle"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+                                                    <span class="circle"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+                                                    <span class="circle"><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></span>
+                                                    <span class="circle"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></span>
+                                                    <span class="circle"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+                                                    <span class="circle"><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></span>
+                                                    <span class="circle"><a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="dm-heading">Recent followers</span>
+                                                <span class="dm-click"><i class="fa fa-chevron-down" aria-hidden="true" data-toggle="collapse" data-target="#recent_followers" aria-expanded="false" aria-controls="recent_followers"></i></span>
+                                                <div class="dm-content">
+                                                    <div class="dm-img-content">
+                                                        <img src="../../images/bred-pit.png" alt="user">
+                                                        <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                    </div>
+                                                    <div class="dm-user-data">
+                                                        <p>Name Longer Surname</p>
+                                                        <span>
+                                                            <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                            <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                            <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="dm-follow">
+                                                        <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                    </div>
+                                                </div>
+                                                <div class="collapse" id="recent_followers">
+                                                    <div class="dm-content">
+                                                        <div class="dm-img-content">
+                                                            <img src="../../images/bred-pit.png" alt="user">
+                                                            <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                        </div>
+                                                        <div class="dm-user-data">
+                                                            <p>Name Longer Surname</p>
+                                                            <span>
+                                                                <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                                <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                                <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="dm-follow">
+                                                            <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dm-content">
+                                                        <div class="dm-img-content">
+                                                            <img src="../../images/bred-pit.png" alt="user">
+                                                            <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                        </div>
+                                                        <div class="dm-user-data">
+                                                            <p>Name Longer Surname</p>
+                                                            <span>
+                                                                <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                                <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                                <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="dm-follow">
+                                                            <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="dm-heading">People you may know</span>
+                                                <span class="dm-click"><i class="fa fa-chevron-down" aria-hidden="true" data-toggle="collapse" data-target="#people_you_may_know" aria-expanded="false" aria-controls="people_you_may_know"></i></span>
+                                                <div class="dm-content">
+                                                    <div class="dm-img-content">
+                                                        <img src="../../images/bred-pit.png" alt="user">
+                                                        <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                    </div>
+                                                    <div class="dm-user-data">
+                                                        <p>Name Longer Surname</p>
+                                                        <span>
+                                                            <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                            <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                            <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="dm-follow">
+                                                        <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                    </div>
+                                                </div>
+                                                <div class="collapse" id="people_you_may_know">
+                                                    <div class="dm-content">
+                                                        <div class="dm-img-content">
+                                                            <img src="../../images/bred-pit.png" alt="user">
+                                                            <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                        </div>
+                                                        <div class="dm-user-data">
+                                                            <p>Name Longer Surname</p>
+                                                            <span>
+                                                                <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                                <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                                <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="dm-follow">
+                                                            <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dm-content">
+                                                        <div class="dm-img-content">
+                                                            <img src="../../images/bred-pit.png" alt="user">
+                                                            <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                        </div>
+                                                        <div class="dm-user-data">
+                                                            <p>Name Longer Surname</p>
+                                                            <span>
+                                                                <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                                <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                                <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="dm-follow">
+                                                            <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="dm-heading">Pets you may like</span>
+                                                <span class="dm-click"><i class="fa fa-chevron-down" aria-hidden="true" data-toggle="collapse" data-target="#pets_you_may_like" aria-expanded="false" aria-controls="pets_you_may_like"></i></span>
+                                                <div class="dm-content">
+                                                    <div class="dm-img-content pet">
+                                                        <img src="../../images/vucko_circle.png" alt="user">
+                                                        <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                    </div>
+                                                    <div class="dm-user-data">
+                                                        <h4>Blecky</h4>
+                                                        <p>Name Longer Surname</p>
+                                                    </div>
+                                                    <div class="dm-follow">
+                                                        <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                    </div>
+                                                </div>
+                                                <div class="collapse" id="pets_you_may_like">
+                                                    <div class="dm-content">
+                                                        <div class="dm-img-content pet">
+                                                            <img src="../../images/vucko_circle.png" alt="user">
+                                                            <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                        </div>
+                                                        <div class="dm-user-data">
+                                                            <h4>Blecky</h4>
+                                                            <p>Name Longer Surname</p>
+                                                        </div>
+                                                        <div class="dm-follow">
+                                                            <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dm-content">
+                                                        <div class="dm-img-content pet">
+                                                            <img src="../../images/vucko_circle.png" alt="user">
+                                                            <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                        </div>
+                                                        <div class="dm-user-data">
+                                                            <h4>Blecky</h4>
+                                                            <p>Name Longer Surname</p>
+                                                        </div>
+                                                        <div class="dm-follow">
+                                                            <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="dm-heading">Near you</span>
+                                                <span class="dm-click"><i class="fa fa-chevron-down" aria-hidden="true" data-toggle="collapse" data-target="#near_you" aria-expanded="false" aria-controls="near_you"></i></span>
+                                                <div class="dm-content">
+                                                    <div class="dm-img-content icon_business">
+                                                        <span><i class="fa fa-info-circle yellow" aria-hidden="true"></i></span>
+                                                    </div>
+                                                    <div class="dm-img-content near_you">
+                                                        <img src="../../images/bred-pit.png" alt="user">
+                                                        <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                    </div>
+                                                    <div class="dm-user-data">
+                                                        <p>Name Longer Surname</p>
+                                                        <div class="dm-follow">
+                                                            <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="collapse" id="near_you">
+                                                    <div class="dm-content">
+                                                        <div class="dm-img-content icon_business">
+                                                            <span><i class="fa fa-info-circle yellow" aria-hidden="true"></i></span>
+                                                        </div>
+                                                        <div class="dm-img-content near_you">
+                                                            <img src="../../images/bred-pit.png" alt="user">
+                                                            <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                        </div>
+                                                        <div class="dm-user-data">
+                                                            <p>Name Longer Surname</p>
+                                                            <div class="dm-follow">
+                                                                <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dm-content">
+                                                        <div class="dm-img-content icon_business">
+                                                            <span><i class="fa fa-info-circle yellow" aria-hidden="true"></i></span>
+                                                        </div>
+                                                        <div class="dm-img-content near_you">
+                                                            <img src="../../images/bred-pit.png" alt="user">
+                                                            <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                        </div>
+                                                        <div class="dm-user-data">
+                                                            <p>Name Longer Surname</p>
+                                                            <div class="dm-follow">
+                                                                <button class="btn btn-primary" type="button"><i class="fa fa-rss" aria-hidden="true"></i> Follow</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">MANAGE MY NETWORK</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+                                        <span class="abs_circle notification">48</span>
+                                        <!-- GENERAL NOTIFICATION MENU -->
+                                        <ul class="hover_menu general_notification hidden">
+                                            <li class="notification_category mention">
+                                                <a href="#">
+                                                    <span class="img_flag general_left">
+                                                        <img src="../../images/miles_davis.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </span>
+                                                    <span class="general_center">
+                                                        <span class="message"><b>Antonio Padron mention</b> you in a comment</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="notification_category comment">
+                                                <a href="#">
+                                                    <span class="img_flag general_left">
+                                                        <img src="../../images/miles_davis.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </span>
+                                                    <span class="general_center">
+                                                        <span class="message"><b>Diana Padron</b> and <b>Victor Nikolic</b> just <b>comment</b> on your status</span>
+                                                        <span class="time">20m</span>
+                                                        <span class="active_buttons">
+                                                            <span class="like_button">
+                                                                <span class=""><i class="fa fa-comment" aria-hidden="true"></i></span>
+                                                                <span class="">05</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="notification_category like">
+                                                <a href="#">
+                                                    <span class="general_left">
+                                                        <img class="new_photo" src="../../images/miles.png" alt="user">
+                                                    </span>
+                                                    <span class="general_center">
+                                                        <span class="message"><b>Diana Padron</b> and <b>Victor Nikolic</b> just <b>like</b> a photo you added</span>
+                                                        <span class="time">20m</span>
+                                                        <span class="active_buttons">
+                                                            <span class="like_button">
+                                                                <span class=""><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+                                                                <span class="">05</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="notification_category request_client">
+                                                <a href="#">
+                                                    <span class="img_flag general_left">
+                                                        <img src="../../images/miles_davis.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </span>
+                                                    <span class="general_center">
+                                                        <span class="name_client">Name Longer</span>
+                                                        <span class="time">20m</span>
+                                                        <span class="surname">Surname</span>
+                                                        <span class="message"><b>request to be your client</b></span>
+                                                        <span class="time">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="notification_category reviews">
+                                                <span class="general_center">
+                                                    <a href="#" class="img_flag">
+                                                        <img src="../../images/miles_davis.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="img_flag">
+                                                        <img src="../../images/miles_davis.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="img_flag">
+                                                        <img src="../../images/miles_davis.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </a>
+                                                </span>
+                                                <span class="time">20m</span>
+                                                <span class="message">10 new <b>reviews</b></span>
+                                            </li>
+                                            <li class="notification_category endorse">
+                                                <span class="general_center">
+                                                    <a href="#" class="img_flag">
+                                                        <img src="../../images/miles_davis.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="img_flag">
+                                                        <img src="../../images/miles_davis.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="img_flag">
+                                                        <img src="../../images/miles_davis.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </a>
+                                                </span>
+                                                <span class="time">20m</span>
+                                                <span class="message">10 new <b>endorsments</b> for the skill <b>Hair Styler</b></span>
+                                            </li>
+                                            <li class="notification_category family_request">
+                                                <span class="general_center">
+                                                    <a href="#" class="img_flag female">
+                                                        <img src="../../images/vucko_circle.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="img_flag female">
+                                                        <img src="../../images/vucko_circle.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="img_flag male">
+                                                        <img src="../../images/vucko_circle.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </a>
+                                                </span>
+                                                <span class="time">20m</span>
+                                                <span class="message">10 new <b>family requests</b> on <b>Blacky Name</b> family tree</span>
+                                            </li>
+                                            <li class="notification_category new_puppies">
+                                                <a href="#">
+                                                    <span class="img_flag general_left male">
+                                                        <img src="../../images/vucko_circle.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </span>
+                                                    <span class="img_flag general_left female">
+                                                        <img src="../../images/vucko_circle.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </span>
+                                                    <span class="general_center">
+                                                        <span class="time">20m</span>
+                                                        <span class="message"><i class="fa fa-heart" aria-hidden="true"></i> New puppies have arrived</span>
+                                                    </span>
+
+                                                </a>
+                                            </li>
+                                            <li class="notification_category change_status">
+                                                <a href="#">
+                                                    <span class="img_flag general_left male">
+                                                        <img src="../../images/vucko_circle.png" alt="user">
+                                                        <span class="abs_circle user">
+                                                            <img class="user_flag" src="../../images/srbija.png" alt="flag">
+                                                        </span>
+                                                    </span>
+                                                    <span class="general_center">
+                                                        <span class="dog_title">Maximuss Magnifico Blanco</span>
+                                                    </span>
+                                                    <span class="general_right">
+                                                        <span class="">change status to</span>
+                                                        <span class="new_status">AVAILABLE FOR MATTING</span>
+                                                    </span>
+                                                    <span class="time">20m</span>
+                                                </a>
+                                            </li>
+                                            <li><a href=""></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-twitch" aria-hidden="true"></i></a>
+                                        <span class="abs_circle notification">5</span>
+                                        <!-- CHAT MENU -->
+                                        <ul class="hover_menu chat_menu hidden">
+                                            <li class="notification_category chat_header">
+                                                <span><a href="#">mark all unread</a></span>
+                                                <span><a href="#">see all message</a></span>
+                                                <span><a href="#">new message</a></span>
+                                            </li>
+                                            <li class="notification_category chat_unread">
+                                                <span class="dm-heading">Unread: 3</span>
+                                                <div class="dm-content">
+                                                    <div class="dm-img-content">
+                                                        <img src="../../images/bred-pit.png" alt="user">
+                                                        <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                    </div>
+                                                    <div class="dm-user-data">
+                                                        <a href="#">Name Longer</a>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="dm-content">
+                                                    <div class="dm-img-content">
+                                                        <img src="../../images/bred-pit.png" alt="user">
+                                                        <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                    </div>
+                                                    <div class="dm-user-data">
+                                                        <a href="#">Name Longer</a>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="dm-content">
+                                                    <div class="dm-img-content">
+                                                        <img src="../../images/bred-pit.png" alt="user">
+                                                        <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                    </div>
+                                                    <div class="dm-user-data">
+                                                        <a href="#">Name Longer</a>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="notification_category chat_connected">
+                                                <span class="dm-heading">Connected</span>
+                                                <span class="dm-click"><i class="fa fa-chevron-down" aria-hidden="true" data-toggle="collapse" data-target="#connected" aria-expanded="false" aria-controls="recent_followers"></i></span>
+                                                <div class="dm-content">
+                                                    <div class="dm-img-content">
+                                                        <img src="../../images/bred-pit.png" alt="user">
+                                                        <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                    </div>
+                                                    <div class="dm-user-data">
+                                                        <p>Name Longer Surname</p>
+                                                        <span>
+                                                            <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                            <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                            <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="dm-follow">
+                                                        <span class="check"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="dm-content">
+                                                    <div class="dm-img-content">
+                                                        <img src="../../images/bred-pit.png" alt="user">
+                                                        <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                    </div>
+                                                    <div class="dm-user-data">
+                                                        <p>Name Longer Surname</p>
+                                                        <span>
+                                                            <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                            <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                            <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="dm-follow">
+                                                        <span class="check"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="dm-content">
+                                                    <div class="dm-img-content">
+                                                        <img src="../../images/bred-pit.png" alt="user">
+                                                        <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                    </div>
+                                                    <div class="dm-user-data">
+                                                        <p>Name Longer Surname</p>
+                                                        <span>
+                                                            <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                            <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                            <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="dm-follow">
+                                                        <span class="check"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="collapse" id="connected">
+                                                    <div class="dm-content">
+                                                        <div class="dm-img-content">
+                                                            <img src="../../images/bred-pit.png" alt="user">
+                                                            <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                        </div>
+                                                        <div class="dm-user-data">
+                                                            <p>Name Longer Surname</p>
+                                                            <span>
+                                                                <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                                <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                                <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="dm-follow">
+                                                            <span class="check"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dm-content">
+                                                        <div class="dm-img-content">
+                                                            <img src="../../images/bred-pit.png" alt="user">
+                                                            <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                        </div>
+                                                        <div class="dm-user-data">
+                                                            <p>Name Longer Surname</p>
+                                                            <span>
+                                                                <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                                <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                                <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="dm-follow">
+                                                            <span class="check"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dm-content">
+                                                        <div class="dm-img-content">
+                                                            <img src="../../images/bred-pit.png" alt="user">
+                                                            <span class="flag"><img src="../../images/srbija.png" alt="flag"></span>
+                                                        </div>
+                                                        <div class="dm-user-data">
+                                                            <p>Name Longer Surname</p>
+                                                            <span>
+                                                                <i class="fa fa-times-circle red" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle orange" aria-hidden="true"></i>
+                                                                <i class="fa fa-info-circle yellow" aria-hidden="true"></i>
+                                                                <i class="fa fa-question-circle green" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="dm-follow">
+                                                            <span class="check"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">SEE MORE</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="manage_your_acc" href="#"><img class="circle" src="../../images/bred-pit.png" alt="user"></a>
+                                        <span class="abs_circle notification"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                                        <!-- SETTINGS MENU -->
+                                        <ul class="hover_menu settings_menu hidden">
+                                            <li><a href="#">Upgrade account</a></li>
+                                            <li><a href="#">Account information</a></li>
+                                            <li><a href="#">Blocking and hiding</a></li>
+                                            <li><a href="#">Privacy and setting</a></li>
+                                            <li><a href="#">Payment info</a></li>
+                                            <li><a href="#">Help</a></li>
+                                            <li><a href="#">Sign out</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="search_icon">
+                                        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="input-group hidden">
+                                    <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class="header_mobile_menu">
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                                        <!--<span class="abs_circle notification">11</span>-->
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+                                        <!--<span class="abs_circle notification">48</span>-->
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-twitch" aria-hidden="true"></i></a>
+                                        <!--<span class="abs_circle notification">5</span>-->
+                                    </li>
+                                    <li>
+                                        <a class="manage_your_acc" href="#"><img class="circle" src="../../images/bred-pit.png" alt="user"></a>
+                                        <!--<a href="#"><i class="fa fa-twitch" aria-hidden="true"></i></a>-->
+                                        <!--<a class="manage_ya" href="#"><img class="circle" src="../images/bred-pit.png" alt="user"></a>-->
+                                        <!--<span class="abs_circle notification"><i class="fa fa-cog" aria-hidden="true"></i></span>-->
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="search_form">
+                                <div class="navbar-collapse input-group">
+                                    <span class="input-group-addon" id="mob_search"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control mob_menu_search" aria-describedby="mob_search">
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </header>
+            <div class="container">
+                <div class="row">
+                    <aside class="sidebar sidebar_left business_background">
+                        <form action="" name="left_data">
+                            <section class="container">
+                                <div class="row">
+                                    <div class="switch pull-right">
+                                        <a class="pull-left active" href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                        <a class="pull-right" href="gallery_business_profile_edit.html"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="row center">
+                                    <div class="img_flag">
+                                        <div class="image_with_flag big">
+                                            <img class="default" src="../../images/business_circle.png" alt="business">
+                                            <span>
+                                                <img src="../../images/srbija.png" alt="flag">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 name_data">
+                                        <!--<div class="sensitive_inf">
+                                                <div class="switch">
+                                                    <label for="name" class="pull-right"><i class="fa fa-lock" aria-hidden="true"></i></label>
+                                                </div>
+                                        </div>-->
+                                        <h2>La casa de los perros</h2>
+                                        <!--<span class="sex circle"><i class="fa fa-mars" aria-hidden="true"></i></span> OVO IDE U H2 TAG
+                                        <p>Intr.Ch.</p>
+                                        <p>Maximuss Magnifico Blanco</p>
+                                        <p class="eclipse center">Golden Cocker Spaniel (ABC)</p>
+                                        <p class="hair center">Short haired</p>-->
+
+                                        <!--                            <div class="col-sm-12 data_form">
+                                                                        <input id="name" type="text" value="Bred Pit" name="name">
+                                                                        <input type="text" value="Intr.Ch" name="champ">
+                                                                        <input type="text" value="Maximuss Magnifico Blanco" name="title">
+                                                                        <input type="text" value="Golden Cocker Spaniel (ABC)" name="breed">
+                                                                        <input type="text" value="Short haired" name="hair">
+                                                                    </div>-->
+                                        <!--<div class="col-sm-2 summary_edit_icon">
+                                            <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </div>-->
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="business_icons">
+                                        <img src="../../images/owner.png" alt="icon">
+                                        <img src="../../images/handler.png" alt="icon">
+                                        <img src="../../images/breeder.png" alt="icon">
+                                        <img src="../../images/walker.png" alt="icon">
+                                        <!--<img src="../images/dog.png" alt="icon">-->
+                                    </div>
+                                </div>
+                                <!--<div class="row">
+                                    <div class="col-sm-12 client">
+                                        <p class="center"><a class="eclipse" href="#" title="CLAIM YOU ARE A CLIENT"><i class="fa fa-link" aria-hidden="true"></i> I'M A CLIENT</a></p>
+                                    </div>
+                                </div>-->
+                                <div class="row">
+                                    <div class="buttons_follow center not_visible">
+                                        <span><a href="#" title="follow"><i class="fa fa-rss circle" aria-hidden="true"></i></a></span>
+                                        <span><a href="#" title="e-mail"><i class="fa fa-envelope-o circle" aria-hidden="true"></i></a></span>
+                                        <span><a href="#" title="share"><i class="fa fa-share-alt circle" aria-hidden="true"></i></a></span>
+                                    </div>
+                                </div>
+
+                                <div class="summary hidden">
+                                    <div class="row">
+                                        <div class="col-sm-4 summary_title right">
+                                            <span><i class="fa fa-birthday-cake circle" aria-hidden="true"></i></span>
+                                        </div>
+                                        <div class="col-sm-6 summary_data">
+                                            <input id="birthday" type="text" value="Trg Slobode 4, 21000" disabled>
+                                        </div>
+                                        <!--                            <div class="col-sm-2 summary_edit_icon">
+                                                                        <label for="birthday"><i class="fa fa-pencil" aria-hidden="true"></i></label>
+                                                                    </div>-->
+                                    </div>
+                                </div>
+
+                                <div class="summary">
+                                    <div class="row">
+                                        <div class="col-sm-4 summary_title right">
+                                            <img class="circle" src="../../images/srbija.png" alt="flag">
+                                        </div>
+                                        <div class="col-sm-6 summary_data">
+                                            <input id="test" type="text" value="Trg Slobode 4, 21000" disabled>
+                                            <input type="text" value="Novi Sad, Serbia" disabled>
+                                        </div>
+                                        <!--                                <div class="col-sm-2 summary_edit_icon">
+                                                                            <label for="test"><i class="fa fa-pencil" aria-hidden="true"></i></label>
+                                                                        </div>-->
+                                    </div>
+                                </div>
+
+                                <div class="summary hidden">
+                                    <div class="row">
+                                        <div class="col-sm-4 summary_title right">
+                                            <span><i class="fa fa-trophy circle" aria-hidden="true"></i></span>
+                                        </div>
+                                        <div class="col-sm-6 summary_data">
+                                            <input id="trophy" type="text" value="Trg Slobode 4, 21000" disabled>
+                                        </div>
+                                        <!--                            <div class="col-sm-2 summary_edit_icon">
+                                                                        <label for="trophy"><i class="fa fa-pencil" aria-hidden="true"></i></label>
+                                                                    </div>-->
+                                    </div>
+                                </div>
+
+                                <div class="summary">
+                                    <div class="row">
+                                        <div class="col-sm-4 summary_title">
+                                            <p class="right">Company</p>
+                                        </div>
+                                        <div class="col-sm-6 summary_data">
+                                            <input id="company_name" type="text" value="Name of the company" disabled>
+                                            <input type="text" value="www.name.com" disabled>
+                                            <input type="text" value="+381 2536987" disabled>
+                                        </div>
+                                        <!--                            <div class="col-sm-2 summary_edit_icon">
+                                                                        <label for="company_name"><i class="fa fa-pencil" aria-hidden="true"></i></label>
+                                                                    </div>-->
+                                    </div>
+
+                                </div>
+                                <div class="summary">
+                                    <div class="row">
+                                        <div class="col-sm-4 summary_title">
+                                            <p class="right">Clubs</p>
+                                        </div>
+                                        <div class="col-sm-6 summary_data">
+                                            <input id="club" type="text" value="Name of the Item" disabled>
+                                        </div>
+                                        <!--                            <div class="col-sm-2 summary_edit_icon">
+                                                                        <label for="club"><i class="fa fa-pencil" aria-hidden="true"></i></label>
+                                                                    </div>-->
+                                    </div>
+                                </div>
+                                <div class="summary">
+                                    <div class="row">
+                                        <div class="col-sm-4 summary_title">
+                                            <p class="right">Association</p>
+                                        </div>
+                                        <div class="col-sm-6 summary_data">
+                                            <input id="association" type="text" value="Name of the Item" disabled>
+                                            <input type="text" value="Name of the Item" disabled>
+                                        </div>
+                                        <!--                            <div class="col-sm-2 summary_edit_icon">
+                                                                        <label for="association"><i class="fa fa-pencil" aria-hidden="true"></i></label>
+                                                                    </div>-->
+                                    </div>
+                                </div>
+                                <!--<div class="row">
+                                    <div class="col-sm-12 business_icons">
+                                        <span><i class="fa fa-info-circle yellow" aria-hidden="true"></i></span>
+                                        <span><i class="fa fa-times-circle red" aria-hidden="true"></i></span>
+                                        <span><i class="fa fa-times-circle orange" aria-hidden="true"></i></span>
+                                        <span><i class="fa fa-times-circle green" aria-hidden="true"></i></span>
+                                    </div>
+                                </div>-->
+                            </section>
+                        </form>
+                    </aside>
+                    <main id="main" class="about">
+                        <div class="main_content container">
+                            <section class="main_header">
+                                <div class="row">
+                                    <div class="cover_picture">
+                                        <img class="img-responsive" src="../../images/vucko.png" alt="cover picture">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 main_menu">
+                                        <ul>
+                                            <li>
+                                                <a href="business_profile_public.html">
+                                                    <span class="nav_icon circle"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                    <span class="nav_name">ABOUT</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="services_business_profile_public.html">
+                                                    <span class="nav_icon circle"><i class="fa fa-scissors" aria-hidden="true"></i></span>
+                                                    <span class="nav_name">SERVICES</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="clients_business_profile_public.html">
+                                                    <span class="nav_icon circle"><i class="fa fa-link" aria-hidden="true"></i></span>
+                                                    <span class="nav_name">CLIENTS</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="active" href="gallery_business_profile_edit.html">
+                                                    <span class="nav_icon circle"><i class="fa fa-file-image-o" aria-hidden="true"></i></span>
+                                                    <span class="nav_name">GALLERY</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="blog_business_profile_public.html">
+                                                    <span class="nav_icon circle"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                    <span class="nav_name">BLOG</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="activity_business_profile_public.html">
+                                                    <span class="nav_icon circle"><i class="fa fa-list" aria-hidden="true"></i></span>
+                                                    <span class="nav_name">ACTIVITY</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <div id="GalleryTab" class="tabcontent gallery">
+                                Gallery public
+                            </div>
+                            
+                        </div>
+                    </main>
+                    <aside class="sidebar sidebar_right">
+                        <form action="" method="" name="right_data">
+                            <section class="container">
+                                <div class="row">
+                                    <div class="number_data">
+                                        <div class="col-sm-3">
+                                            <p class="number">5020</p>
+                                            <p class="number_category">views</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p class="number">520</p>
+                                            <p class="number_category">followers</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p class="number">520</p>
+                                            <p class="number_category">following profiles</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p class="number">520</p>
+                                            <p class="number_category">following dogs</p>
+                                        </div>
+                                        <!--<div class="col-sm-3">
+                                            <p class="number">1</p>
+                                            <p class="number_category">treats</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p class="number">26</p>
+                                            <p class="number_category">relatives</p>
+                                        </div>-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="clients">
+                                        <div class="clients_data">
+                                            <span class="right_menu head">CLIENTS</span>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- END CLIENTS -->
+                                    <div class="mutual">
+                                        <div class="mutual_data">
+                                            <span class="right_menu head">MUTUAL</span>
+
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <!--                                        <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>-->
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <!--<a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>-->
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <!--<a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>-->
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <!--<a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>-->
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <!--<a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END MUTUAL -->
+                                    <div class="recommended_for_you">
+                                        <div class="recommended_for_you_data">
+                                            <span class="right_menu head">RECOMMENDED FOR YOU</span>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="pet_male" src="../../images/vucko_circle.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="name_title smallest">
+                                                    <p class="dog_name">Blacky</p>
+                                                    <p class="dog_title">Intr.Ch.</p>
+                                                    <p class="dog_title">Maximuss Magnifico Blanco</p>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="pet_male" src="../../images/vucko_circle.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="name_title smallest">
+                                                    <p class="dog_name">Blacky</p>
+                                                    <p class="dog_title">Intr.Ch.</p>
+                                                    <p class="dog_title">Maximuss Magnifico Blanco</p>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="pet_female" src="../../images/dog_circle.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="name_title smallest">
+                                                    <p class="dog_name">Blacky</p>
+                                                    <p class="dog_title">Intr.Ch.</p>
+                                                    <p class="dog_title">Maximuss Magnifico Blanco</p>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="pet_male" src="../../images/vucko_circle.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="name_title smallest">
+                                                    <p class="dog_name">Blacky</p>
+                                                    <p class="dog_title">Intr.Ch.</p>
+                                                    <p class="dog_title">Maximuss Magnifico Blanco</p>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="pet_female" src="../../images/dog_circle.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="name_title smallest">
+                                                    <p class="dog_name">Blacky</p>
+                                                    <p class="dog_title">Intr.Ch.</p>
+                                                    <p class="dog_title">Maximuss Magnifico Blanco</p>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END RECOMMENDED FOR YOU -->
+                                    <div class="bottom_part">
+                                        <div class="bottom_part_data">
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                            <div class="user_professions">
+                                                <div class="image_with_flag smallest">
+                                                    <img class="user" src="../../images/miles.png" alt="user">
+                                                    <span>
+                                                        <img src="../../images/srbija.png" alt="flag">
+                                                    </span>
+                                                </div>
+                                                <div class="professions smallest">
+                                                    <p>Name Surname Longest</p>
+                                                    <span>
+                                                        <img src="../../images/owner.png" alt="icon" title="Owner">
+                                                        <img src="../../images/breeder.png" alt="icon" title="Breeder">
+                                                        <img src="../../images/handler.png" alt="icon" title="Handler">
+                                                        <img src="../../images/walker.png" alt="icon" title="Walker">
+                                                    </span>
+                                                </div>
+                                                <a class="follow_button" href="#"><i class="fa fa-rss" aria-hidden="true"></i> FOLLOW</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END BOTTOM PART -->
+                                </div>
+                            </section>
+                        </form>
+                    </aside>
+                </div>
+            </div>
+            <div class="top-footer">
+                <div class="container">
+                    <div class="collapse navbar-collapse">
+                        <span class="center-item">
+                            <i class="fa fa-chevron-down" data-toggle="collapse" data-target="#footer-menu" aria-hidden="true" aria-expanded="false"></i>
+                        </span>
+                        <div id="footer-menu" class="collapse footer-menu row">
+                            <div class="col-md-7">
+                                <div class="row">
+                                    <div class="footer-standard col-md-3">
+                                        <div class="bottom-line">
+                                            <span class="">STANDARD</span>
+                                            <span>
+                                                <i class="fa fa-chevron-down" aria-hidden="true" data-toggle="collapse" data-target="#standard-groups" aria-expanded="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="collapse in" id="standard-groups" aria-expanded="true">
+                                            <ul>
+                                                <li>FCI GROUP 1</li>
+                                                <li>FCI GROUP 1</li>
+                                                <li>FCI GROUP 1</li>
+                                                <li>FCI GROUP 1</li>
+                                                <li>FCI GROUP 1</li>
+                                                <li>FCI GROUP 1</li>
+                                                <li>FCI GROUP 1</li>
+                                                <li>FCI GROUP 1</li>
+                                                <li>FCI GROUP 1</li>
+                                                <li>FCI GROUP 1</li>
+                                                <li>NATIONAL BREEDS</li>
+                                                <li>MIX BREED</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="footer-featured-blogs col-md-4">
+                                        <div class="bottom-line">
+                                            <span class="">FEATURED BLOGS</span>
+                                            <span>
+                                                <i class="fa fa-chevron-down" aria-hidden="true" data-toggle="collapse" data-target="#featured-blogs" aria-expanded="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="collapse in" id="featured-blogs" aria-expanded="true">
+                                            <span>ANOUNCEMENTS BLOGS TITLE BLOG TITLE</span>
+                                            <p class="bottom-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                                            </p>
+                                        </div>
+                                        <div class="blog-author">
+                                            <img class="circle" src="../../images/miles_davis.png">
+                                            <span>NAME AN SURNAME</span>
+                                        </div>
+                                    </div>
+                                    <div class="footer-tips col-md-4">
+                                        <div class="bottom-line">
+                                            <span class="">TIPS</span>
+                                            <span>
+                                                <i class="fa fa-chevron-down" aria-hidden="true" data-toggle="collapse" data-target="#tips" aria-expanded="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="collapse in" id="tips" aria-expanded="true">
+                                            <span class="bottom-line">HOW TO BUY A NEW DOG</span>
+                                            <span class="bottom-line">ETHIS BEHING</span>
+                                            <span class="bottom-line">EMENTS BLOTG TITLE NEWS INTERN</span>
+                                            <span class="">ANOUNCEMENTS BLOG TITLE NEWS</span>
+                                            <span class="">ANOUNCEMENTS BLOG TITLE NEWS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="row">
+                                    <div class="footer-follow col-md-6">
+                                        <div class="bottom-line">
+                                            <span class="">FOLLOW US</span>
+                                            <span>
+                                                <i class="fa fa-chevron-down" aria-hidden="true" data-toggle="collapse" data-target="#follow" aria-expanded="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="collapse in" id="follow" aria-expanded="true">
+                                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                            <div class="fallow">
+                                                <input class="input-fields" type="text" placeholder="SIGN UP FOR NEWSLETTER">
+                                                <button class="footer-button pull-right">SEND</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer-contact col-md-6">
+                                        <div class="bottom-line">
+                                            <span class="">CONTACT US</span>
+                                            <span>
+                                                <i class="fa fa-chevron-down" aria-hidden="true" data-toggle="collapse" data-target="#contact" aria-expanded="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="collapse in" id="contact" aria-expanded="true">
+                                            <div class="contact-form">
+                                                <input class="input-fields" type="text" placeholder="EMAIL">
+                                                <input class="input-fields half-form" type="text" placeholder="NAME">
+                                                <input class="input-fields half-form pull-right" type="text" placeholder="LAST NAME">
+                                                <input class="input-fields" type="text" placeholder="ABOUT">
+                                                <textarea class="input-fields" rows="4"></textarea>
+                                                <button class="footer-button pull-right">SEND</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="footer">
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                            <ul class="nav navbar-nav pull-left">
+                                <li><a href="#">DOGGYPEDIA<span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">BLOGS</a></li>
+                                <li><a href="#">TIPS</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a href="#">ABOUT US<span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">TERMS AND CONDITIONS</a></li>
+                                <li><a href="#">PRIVACY</a></li>
+                                <li><a href="#">FAQS</a></li>
+                                <li><a href="#">&#169 PET2NET.COM / 2017</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </footer>
+        </div>
+        <!-- bower:js -->
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- endbower -->
+
+        <!-- injector:js -->
+        <script src="../../js/scripts.js"></script>
+        <!-- endinjector -->
+        <script>
+            $("#expanded_interests").click(function() {
+                if ($('#tags div').hasClass("expander")) {
+                    $('#tags div').removeClass("expander");
+                }
+                else {
+                     $('#tags div').addClass("expander");
+                }
+            });
+        </script>
+        <script>
+            $('.collapse_icon').click(function () {
+                $(this).toggleClass('active').find('i').toggleClass('fa fa-chevron-up fa fa-chevron-down')
+                    .removeClass('active').find('i').removeClass('fa fa-chevron-down').addClass('fa fa-chevron-up');
+            });
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,31 @@
+.additional_info{
+    .form-group{
+        margin-bottom: 5px;
+        label{
+            @include roboto(12px, $main_font_color);
+            text-align: right;
+            padding: 0;
+        }
+        input,
+        select,
+        textarea{
+            @include roboto(12px, $active_edit_mode);
+            @include borders(solid, 1px, $right_side_background);
+            @include border-radius(10px);
+            @include box-shadow(0, 0, 0, 0);
+            background-color: transparent;
+            height: auto;
+            padding: 0 10px;
+            &:active, &:focus{
+                outline: none;
+            }
+        }
+        select{
+            @include roboto(12px, $active_text_color);
+            background-color: $right_side_background;
+        }
+        textarea{
+            padding: 10px;
+        }
+    }
+}

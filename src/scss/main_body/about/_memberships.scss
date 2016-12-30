@@ -1,0 +1,26 @@
+.memberships{
+    .memberships_body{
+        .table-responsive{
+            table{
+                border-top: solid 1px $dropdown_border;
+                tr{
+                    td{
+                        white-space: normal !important;
+                        >div{
+                            width: 169px !important;
+                            >p{
+                                @include roboto_bold(12px, $dropdown_border);
+                                border-bottom: 1px solid $dropdown_border;
+                            }
+                        }
+                    }
+                    .name_title{
+                        p{
+                            @include roboto(12px, $main_font_color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

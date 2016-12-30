@@ -1,0 +1,96 @@
+.general_business{
+    p{
+        @include roboto(12px, $main_font_color);
+        margin-bottom: 0;
+    }
+    label{
+        @include roboto_condensed_light(12px, $main_font_color);
+    }
+    input,
+    select,
+    textarea,
+    .input-group-addon{
+        @include roboto_bold(13px, $inactive_text_color);
+        @include box-shadow(0, 0, 0, 0);
+        border: none;
+        border-bottom: 2px solid $dropdown_border;
+        border-radius: 0;
+        padding: 3px 3px;
+        background-color: transparent;
+        &[disabled]{
+            background-color: transparent;
+        }
+    }
+    .profile_created{
+        label{
+            @include roboto_condensed_light(12px, $main_font_color);
+        }
+        input{
+            @include roboto_bold(13px, $inactive_text_color);
+        }
+    }
+    .form-control{
+        height: 24px;
+    }
+    .about_col{
+        padding-top: 10px;
+        textarea{
+            @include borders(solid, 2px, $inactive_text_color);
+            @include border-radius(10px);
+        }
+    }
+    .matting_dog,
+    .owner_matting_dog{
+        display: inline-block;
+    }
+    .matting_dog{
+        margin-left: 20px;
+    }
+}
+.edit{
+    .general_business{
+        label{
+            @include roboto_condensed_light(12px, $active_edit_mode);
+            &.turn_of{
+                color: $main_font_color;
+            }
+        }
+        input,
+        select,
+        textarea,
+        .input-group-addon{
+            @include roboto_bold(13px, $active_edit_mode);
+            border-bottom: 2px solid $active_edit_mode;
+            &:focus, &:active{
+                outline: none;
+                @include box-shadow(0, 0, 0, 0);
+            }
+            &#profile_created{
+                @include roboto_bold(13px, $inactive_text_color);
+                border-bottom: 2px solid $dropdown_border;
+            }
+        }
+        textarea{
+            @include placeholder($active_edit_mode);
+            background-color: $right_side_background;
+        }
+        .form-control{
+            &.turn_of{
+                border-bottom: 2px solid $dropdown_border;
+                background-color: transparent;
+                color: $inactive_text_color;
+            }
+        }
+        .about_col{
+            textarea{
+                @include borders(solid, 2px, $active_edit_mode);
+            }
+        }
+        .general_networks{
+            text-align: center;
+            div{
+                padding: 0;
+            }
+        }
+    }
+}

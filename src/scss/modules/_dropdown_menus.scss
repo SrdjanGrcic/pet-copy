@@ -1,0 +1,61 @@
+#header{
+    .hover_menu{
+        @include borders(solid, 1px, $dropdown_border);
+        min-width: 205px; // 205px
+        border-radius: 0 0 10px 10px;
+        background-color: $right_side_background;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        top: 54px;
+        z-index: 99;
+    }
+    .select_menu{
+        li{
+            @include borders(solid, 1px, $dropdown_border);
+            @include border-radius(10px);
+            background-color: $inactive_background;
+            min-width: 120px; //120px
+            height: auto;
+            margin: 10px;
+            text-align: center;
+            a{
+                padding: 0;
+                @include roboto(11px, $main_font_color);
+                span{
+                    @include roboto(9px, $main_font_color);
+                    background-color: $active_edit_mode;
+                    color: $white;
+                    padding: 2px 3px;
+                    margin: -1px -1px;
+                }
+            }
+            i{
+                background-color: $active_edit_mode;
+                padding: 3px 4px;
+                margin: -1px -1px;
+                @include border-radius(50%);
+                color: $white;
+            }
+        }
+    }
+    .settings_menu{
+        right: 5px;
+        min-width: 180px;
+        li{
+            @include roboto(15px, $main_font_color);
+            margin: 10px;
+            padding: 0 0 10px 10px;
+            border-bottom: 1px solid $dropdown_border;
+            text-align: left;
+            &:last-of-type{
+                border-bottom: none;
+            }
+            a{
+                //background-color: $white;
+                padding: 0;
+                color: $main_font_color;
+            }
+        }
+    }
+}

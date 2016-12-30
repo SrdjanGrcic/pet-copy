@@ -1,0 +1,143 @@
+.matting_list{
+    .matting_list_body{
+        .table-responsive{
+            border: none;
+            tr{
+                td{
+                    padding-top: 8px;
+                    padding-bottom: 0;
+                    &:nth-of-type(3), &:nth-of-type(5){
+                        border-right: 1px solid $dropdown_border;
+                    }
+                    &:last-of-type{
+                        padding: 0;
+                        vertical-align: middle;
+                    }
+                    p{margin-bottom: 5px;}
+                    .professions{
+                        >p{
+                            margin-bottom: 5px;
+                        }
+                        &.normal{
+                            img{
+                                @media screen and (max-width: 1200px) {
+                                    @include max-width(18px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .professions{
+            >p{
+                margin-bottom: 5px;
+            }
+            &.normal{
+                img{
+                    @media screen and (max-width: 1200px) {
+                        @include max-width(18px);
+                    }
+                }
+            }
+        }
+        .new_matting{
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            .status{
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+            }
+        }
+        .status{
+            text-align: center;
+            .status_button{
+                @include border-radius(10px);
+                @include roboto_bold(11px, $white);
+                margin-bottom: 10px;
+                padding: 0 5px;
+                &.accept{
+                    @include borders(solid, 1px, $status_green);
+                    background-color: $white;
+                    a{
+                        color: $status_green;
+                    }
+                }
+                &.accepted{
+                    @include borders(solid, 1px, $status_green);
+                    background-color: $status_green;
+                    a{
+                        color: $white;
+                    }
+                }
+                &.cancel{
+                    @include borders(solid, 1px, $status_red);
+                    background-color: $white;
+                    a{
+                        color: $status_red;
+                    }
+                }
+                &.block{
+                    @include borders(solid, 1px, $black);
+                    background-color: $white;
+                    a{
+                        color: $black;
+                    }
+                }
+            }
+        }
+        .show_to_others,
+        .hide_from_others{
+            a{
+                @include border-radius(50%);
+                font-size: 11px;
+                background-color: $active_edit_mode;
+                color: $white;
+                padding: 3px 5px;
+            }
+        }
+    }
+}
+.edit{
+    .hearth_date{
+        display: inline-block;
+        text-align: center;
+        span{
+            &:first-of-type{
+                @include border-radius(50%);
+                font-size: 23px;
+                color: $status_red;
+                background-color: $active_background;
+                padding: 8px 10px;
+            }
+        }
+        p{
+            @include roboto(12px, $status_red);
+            margin-bottom: 0
+        }
+    }
+    .matting_dog_data{
+        padding-top: 10px;
+        span{
+            vertical-align: top;
+            padding-top: 17px;
+            margin-left: 10px;
+            color: $active_edit_mode;
+            display: inline-block;
+        }
+    }
+    .token,
+    .ellipse_edit_ntb{
+        @include max_width(45px);
+        display: block;
+        margin: 0 auto 5px;
+    }
+    .ellipse_edit_ntb{
+        @include max_width(54px);
+        line-height: 12px;
+        &:hover, &:active, &:focus{
+            background-color: $active_edit_mode;
+            color: $white;
+        }
+    }
+}

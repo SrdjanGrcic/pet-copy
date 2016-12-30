@@ -1,0 +1,27 @@
+#header{
+    .my_network_menu, .chat_menu{
+        right: 5px;
+        min-width: 260px;
+        padding: 20px 0;
+        li{
+            margin: 0 10px;
+            border-top: 1px solid $dropdown_border;
+            text-align: center;
+            position: relative;
+            &:last-of-type{
+                @include roboto(11px, $main_font_color);
+                border-top: 1px solid $active_text_color;
+                color: $active_text_color;
+                padding-top: 8px;
+            }
+            .circle{
+                font-size: 12px;
+                padding: 3px 5px;
+                i{
+                    color: $active_text_color;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}

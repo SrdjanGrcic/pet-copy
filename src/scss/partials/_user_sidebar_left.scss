@@ -1,0 +1,285 @@
+.sidebar_left{
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+    .row{
+        width: 254px;
+    }
+    .name_data{
+        margin-top: 5px;
+        position: relative;
+        h2{
+            @include roboto_condensed(25px, $white);
+            text-align: center;
+            word-wrap: break-word;
+            .circle{
+                padding: 3px 5px;
+                vertical-align: middle;
+            }
+        }
+        p{
+            margin: 0;
+            text-align: center;
+            font-weight: lighter;
+            font-style: italic;
+            line-height: 1;
+            &:first-of-type{
+                @include roboto_condensed(15px, $white);
+            }
+            &:nth-child(3){
+                @include roboto_condensed(19px, $white);
+            }
+        }
+        .sensitive_inf{
+            //display: none;
+            @include absolute_center();
+            @include border-radius(10px);
+            width: 90%;
+            height: 175px;
+            top: 0;
+            background-color: $progress_color;
+            z-index: 49;
+            .switch {
+                margin: 50px auto 0;
+                padding: 2px 5px 0 0;
+                background-color: $white;
+                &:hover:after{
+                    content: "THIS IS VERY SENSITIVE INFORMATION";
+                    @include max_width(200px);
+                    @include border-radius(10px);
+                    @include roboto(12px, $active_edit_mode);
+                    text-align: center;
+                    margin: 0 auto;
+                    background-color: $white;
+                    position: absolute;
+                    left: 15px;
+                    top: 80px;
+                    padding: 10px;
+                }
+                a {
+                    padding-left: 40px;
+                    display: block;
+                }
+                i {
+                    color: $main_font_color;
+                    font-size: 17px;
+                }
+            }
+        }
+        .data_form{
+            &.user{
+                padding: 0 0 0 30px;
+                border: none;
+            }
+            input{
+                @include roboto_condensed_light_italic(15px, $white);
+                width: 100%;
+                text-align: center;
+                background-color: transparent;
+                border: none;
+                &[name=firstName], &[name=lastName]{
+                    @include roboto_condensed(25px, $white);
+                    font-weight: normal;
+                    font-style: normal;
+                    margin-right: -30px;
+                }
+                &[name=title]{
+                    @include roboto_condensed(19px, $white);
+                }
+                &[name=breed], &[name=hair]{
+                    @include roboto_condensed(12px, $white);
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .eclipse{
+            @include roboto_condensed(12px, $active_text_color);
+            background-color: $white;
+            margin-top: 15px;
+        }
+        .hair{
+            @include roboto_condensed(12px, $white);
+            padding-top: 5px;
+        }
+    }
+    .switch{
+        width: 58px;
+        height: 26px;
+        margin: -1px 13px 5px 0;
+        @include borders(solid, 2px, $white);
+        @include border-radius(15px);
+        a{
+            &.active{
+                @include borders(solid, 2px, $white);
+                @include border-radius(50%);
+                background-color: $active_edit_mode;
+            }
+            @include borders(solid, 2px, transparent);
+            @include border-radius(50%);
+            padding: 1px 4px;
+            margin-top: -1px;
+            margin-left: -2px;
+            &:first-of-type{
+                padding: 1px 3px;
+            }
+            &:last-of-type{
+                margin-right: -2px;
+            }
+            i{
+                font-size: 15px;
+                color: $white;
+            }
+        }
+    }
+    .img_flag{
+        position: relative;
+        img{
+            @include max_width(160px);
+            @include borders(solid, 3px, $white);
+            @include box-shadow(0px, 0px, 10px, rgba(0, 0, 0, 1));
+        }
+        &.edit{
+            .image_with_flag{
+                >span{
+                    @include max_width(47px);
+                    @include borders(solid, 3px, $white);
+                    @include border-radius(50%);
+                    background-color: $slippers_icon;
+                    padding: 6px;
+                    >i{
+                        font-size: 25px;
+                        text-align: center;
+                    }
+                }
+                .upload_image{
+                    @include absolute_center;
+                    bottom: 54px;
+                    z-index: 100;
+                }
+            }
+        }
+        .image_with_flag{
+            margin: 0 auto;
+        }
+
+        .user_flag{
+            @include max_width(43px);
+        }
+        .abs_circle{
+            &.user{
+                bottom: 0;
+                right: 44px;
+            }
+        }
+        .progress_acc{
+            //display: none;
+            @include max_width(154px);
+            background-color: $progress_color;
+            height: 154px;
+            position: absolute;
+            top: 3px;
+            margin: 0 auto;
+            overflow-x: hidden;
+            left: 0;
+            right: 0;
+            z-index: 49;
+            .progress_acc_trans{
+                @include max_width(170px);
+                position: absolute;
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 59;
+            }
+        }
+        .exchange{
+            background-color: $slippers_icon;
+            padding: 6px;
+            i{
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+    }
+    .buttons_follow{
+        position: relative;
+        margin: 50px 0 45px;
+        .circle{
+            padding: 5px 7px;
+            background-color: $active_text_color;
+            color: $white;
+            &:hover{
+                background-color: $white;
+                color: $active_text_color;
+            }
+        }
+        &:before{
+            @include border_50_top(-20px, 33%, 33%)
+        }
+    }
+    .client{
+        a{
+            @include borders(solid, 1px, $white);
+            @include roboto(12px, $white);
+            background-color: $business_background;
+            padding: 3px 15px;
+            &:hover{
+                @include borders(solid, 1px, $business_background);
+                background-color: $white;
+                color: $main_font_color;
+            }
+        }
+    }
+    .summary{
+        position: relative;
+        @include roboto_condensed_light(14px, $white);
+        &:before{
+            @include border_50_top(-20px, 33%, 33%)
+        }
+        span{
+            .circle{
+                @include borders(solid, 1px, $white);
+                padding: 3px 5px;
+                color: $white;
+            }
+        }
+        .circle{
+            width: 25px;
+            @include borders(solid, 2px, $white);
+        }
+        .summary_title{
+            padding: 0 8px;
+        }
+        .summary_data{
+            margin-bottom: 40px;
+            padding: 0 0 0 3px;
+            word-wrap: break-word;
+            p{
+                margin: 0;
+            }
+            .street{
+                padding-left: 3px;
+                margin-top: -2px;
+            }
+            .town{
+                padding-left: 3px;
+                margin-top: -5px;
+            }
+            input{
+                display: block;
+                background-color: transparent;
+                height: 15px;
+                border: none;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .summary_edit_icon{
+            padding: 0;
+            text-align: center;
+        }
+    }
+}

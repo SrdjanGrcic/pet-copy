@@ -1,0 +1,80 @@
+.team{
+    .form-control{
+        height: auto;
+    }
+    .form-group{
+        margin-bottom: 10px;
+    }
+    .matting_dog{
+        margin: 0 auto;
+    }
+    .my_team_mate,
+    .add_team_mate{
+        display: inline-block;
+    }
+    .my_team_mate{
+        margin-right: 10px;
+        
+        //Added to center user img
+        .image_with_flag{
+            margin: 0 auto;
+        }
+    }
+    .team_position{
+        margin-top: 10px;
+        text-align: center;
+        p{
+            margin: 0;
+        }
+        .team_position_title{
+            @include roboto(12px, $active_text_color);
+            @include border-radius(10px);
+            @include borders(solid, 1px, $dropdown_border);
+            @include placeholder($active_text_color);
+            @include max_width(130px);
+            padding: 0 10px;
+            margin-bottom: 5px;
+        }
+    }
+}
+.edit{
+    .team{
+
+        .add_team_mate{
+            padding: 0 15px;
+            margin-bottom: 22px;
+            display: inline-block;
+            vertical-align: top;
+            a{
+                @include border-radius(50%);
+                background-color: $active_edit_mode;
+                color: $white;
+                padding: 3px 9px;
+                font-size: 36px;
+            }
+            span{
+                @include roboto(12px, $active_edit_mode);
+                margin-left: 10px;
+                vertical-align: super;
+            }
+        }
+        .flag{
+            a{
+                background-color: $active_edit_mode;
+                color: $white;
+                padding: 3px 5px;
+            }
+        }
+        .team_position{
+            margin-top: 30px;
+            input{
+                @include roboto(12px, $active_edit_mode);
+                @include borders(solid, 1px, $active_edit_mode);
+                @include border-radius(10px);
+                @include placeholder($active_text_color);
+                @include max_width(130px);
+                padding: 0 10px;
+            }
+        }
+    }
+}

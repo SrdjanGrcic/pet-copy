@@ -1,0 +1,12 @@
+.dog_edit_about,
+.dog_about{
+    input {
+        @include box-shadow(0, 0, 0, inset);
+    }
+    .about_general {
+        p:last-child {
+            @include roboto_light(13px, $more_font_color);
+        }
+    }
+}
+

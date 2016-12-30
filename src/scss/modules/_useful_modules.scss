@@ -1,0 +1,187 @@
+.testing{
+    background-color: $right_side_background;
+}
+.team_position_title{
+    display: inline-block;
+    @include roboto(12px, $active_text_color);
+    @include border-radius(10px);
+    @include borders(solid, 1px, $dropdown_border);
+    @include placeholder($active_text_color);
+    //@include max_width(130px);
+    padding: 0 10px;
+    margin-bottom: 5px;
+    line-height: 12px;
+}
+.image_with_flag{
+    position: relative;
+    img{
+        @include border-radius(50%);
+    }
+    span{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 59;
+    }
+    &.big{
+        @include max_width(160px);
+        img{
+            @include max_width(160px);
+        }
+        span{
+            img{
+                @include max_width(47px);
+                @include borders(solid, 3px, $white);
+            }
+        }
+    }
+    &.normal{
+        @include max_width(66px);
+        @media screen and (max-width: 768px) {
+            @include max_width(45px);
+        }
+        img{
+            @include max_width(66px);
+        }
+        span{
+            right: -6px;
+            img{
+                @include max_width(25px);
+                @include borders(solid, 2px, $white);
+                @media screen and (max-width: 768px) {
+                    @include max_width(20px);
+                }
+            }
+        }
+    }
+    &.smallest{
+        @include max_width(45px);
+        img{
+            @include max_width(45px);
+        }
+        span{
+            img{
+                @include max_width(20px);
+                @include borders(solid, 2px, $white);
+            }
+        }
+    }
+}
+.professions{
+    line-height: 12px;
+    p{
+        @include roboto(12px, $main_font_color);
+    }
+    span{
+        img{
+            @include border-radius(50%);
+        }
+    }
+    &.normal{
+        span{
+            img{
+                @include max_width(25px);
+                @media screen and (max-width: 768px) {
+                    @include max_width(20px);
+                }
+            }
+        }
+    }
+    &.smallest{
+        @include max_width(100px);
+        p{
+            margin: 0 0 7px;
+            word-wrap: normal;
+            line-height: 12px;
+        }
+        span{
+            img{
+                @include max_width(20px);
+            }
+        }
+        div{
+            display: inline-block;
+            vertical-align: bottom;
+        }
+    }
+}
+.name_title{
+    &.smallest{
+        @include max_width(100px);
+        p{
+            word-wrap: normal;
+            line-height: 12px;
+        }
+    }
+    p{
+        @include roboto_condensed_light(11px, $main_font_color);
+        margin: 0 0 2px;
+        text-align: left;
+        word-wrap: break-word;
+        line-height: 12px;
+        &:first-of-type{
+            @include roboto_bold(15px, $main_font_color);
+        }
+    }
+}
+
+.user_professions{
+    .image_with_flag,
+    .professions,
+    .name_title{
+        display: inline-block;
+    }
+    .image_with_flag{
+        margin-right: 9px;
+    }
+    .professions,
+    .name_title{
+        vertical-align: bottom;
+        &.smallest{
+            @include max_width(100px);
+            p{
+                word-wrap: normal;
+                line-height: 12px;
+            }
+        }
+    }
+    .parents_dogs{
+        vertical-align: middle;
+        margin-left: 10px;
+        text-align: center;
+        .dog_name{
+            margin-top: 8px;
+            @include roboto(12px, $active_edit_mode);
+        }
+    }
+}
+.dog_name_title{
+    display: inline-block;
+    .image_with_flag,
+    .name_title{
+        display: inline-block;
+    }
+    .image_with_flag{
+        margin-right: 9px;
+    }
+    .name_title{
+        vertical-align: middle;
+        &.smallest{
+            @include max_width(100px);
+        }
+    }
+}
+.user_team_title{
+    display: inline-block;
+    .image_with_flag,
+    .professions{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .professions{
+        span{
+            display: block;
+            text-align: center;
+        }
+    }
+}

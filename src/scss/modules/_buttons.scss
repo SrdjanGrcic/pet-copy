@@ -1,0 +1,273 @@
+.follow_button{
+    @include roboto(10px, $active_text_color);
+    @include borders(solid, 1px, $dropdown_border);
+    @include border-radius(10px);
+    background-color: $white;
+    padding: 0 5px;
+    &:active, &:focus{
+        outline: none;
+        text-decoration: none;
+    }
+    &:hover{
+        @include borders(solid, 1px, $active_text_color);
+        background-color: $active_text_color;
+        color: $white;
+    }
+    &.following_ntb{
+        i{
+            color: $status_green;
+        }
+    }
+    .edit_add{
+        background-color: $active_edit_mode;
+        color: $white;
+        &:hover, &:active{
+            background-color: $active_edit_mode;
+            color: $white;
+        }
+    }
+}
+.follow_button_inverse{
+    @include roboto(10px, $white);
+    @include borders(solid, 1px, $active_text_color);
+    @include border-radius(10px);
+    background-color: $active_text_color;
+    padding: 0 5px;
+    //margin-left: 10px;
+    &:hover{
+        @include borders(solid, 1px, $dropdown_border);
+        background-color: $white;
+        color: $active_text_color;
+    }
+}
+.ellipse_edit_ntb{
+    @include border-radius(10px);
+    background-color: $active_edit_mode;
+    color: $white;
+    text-align: center;
+    &:hover, &:active{
+        background-color: $active_edit_mode;
+        color: $white;
+    }
+    &.smallest{
+        font-size: 10px;
+        padding: 1px 15px;
+    }
+
+}
+.ntb{
+    @include border-radius(50%);
+    &.big{
+        font-size: 35px;
+        width: 50px;
+    }
+    &.token{
+        @include max-width(43px);
+        height: 43px;
+        font-size: 23px;
+        padding: 9px 9px;
+    }
+    &.bigger{
+        font-size: 23px;
+        width: 40px;
+    }
+    &.normal{
+        font-size: 20px;
+        width: 35px;
+    }
+    &.normal_social{
+        font-size: 15px;
+    }
+    &.smallest{
+        font-size: 15px;
+        width: 30px;
+    }
+    &.ultra_small{
+        font-size: 8px;
+        width: 16px;
+        padding: 2px;
+    }
+    &.border{
+        @include borders(solid, 2px, $white);
+    }
+}
+.ntb_add{
+    @include borders(solid, 1px, $active_edit_mode);
+    background-color: $active_edit_mode;
+    color: $white;
+    &:hover, &:focus{
+        color: $white;
+        outline: none;
+    }
+}
+.ntb_edit{
+    @include borders(solid, 1px, $inactive_background);
+    background-color: $inactive_background;
+    color: $inactive_text_color;
+    &:hover, &:focus{
+        @include borders(solid, 1px, $active_edit_mode);
+        background-color: $active_edit_mode;
+        color: $white;
+        outline: none;
+    }
+}
+.ntb_public{
+    @include borders(solid, 1px, $dropdown_border);
+    background-color: $white;
+    color: $active_text_color;
+    &:hover, &:focus{
+        @include borders(solid, 1px, $dropdown_border);
+        background-color: $white;
+        color: $active_text_color;
+        outline: none;
+    }
+    &.border{
+        @include borders(solid, 1px, $dropdown_border);
+    }
+}
+.ntb_public_with_hover{
+    @include borders(solid, 1px, $white);
+    background-color: $white;
+    color: $active_text_color;
+    &:hover, &:focus{
+        @include borders(solid, 1px, $active_text_color);
+        background-color: $active_text_color;
+        color: $white;
+        outline: none;
+    }
+}
+.ntb_public_inverse{
+    @include borders(solid, 1px, $active_text_color);
+    background-color: $active_text_color;
+    color: $white;
+    &:hover, &:focus{
+        /*@include borders(solid, 1px, $white);
+        background-color: $white;
+        color: $active_text_color;*/
+        @include borders(solid, 1px, $active_text_color);
+        background-color: $active_text_color;
+        color: $white;
+        outline: none;
+    }
+}
+.ntb_danger{
+    @include borders(solid, 1px, $status_red);
+    background-color: $status_red;
+    color: $white;
+    &:hover, &:focus{
+        @include borders(solid, 1px, $status_red);
+        background-color: $status_red;
+        color: $white;
+        outline: none;
+    }
+}
+.ntb_exchange{
+    background-color: $slippers_icon;
+    color: $black;
+}
+.ntb_check{
+    @include borders(solid, 1px, $status_green);
+    background-color: $status_green;
+    color: $white;
+}
+.ntb_uncheck{
+    @include borders(solid, 1px, $status_red);
+    background-color: $status_red;
+    color: $white;
+}
+.ntb_badge_red{
+    background-color: $active_background;
+    color: $status_red;
+}
+.ntb_badge_blue{
+    background-color: $active_background;
+    color: $active_text_color;
+}
+.ntb_male{
+    background-color: $male_dog_background;
+    color: $white;
+}
+.ntb_female{
+    background-color: $female_dog_background;
+    color: $white;
+}
+.ntb_awards{
+    background-color: $active_background;
+    color: $active_text_color;
+}
+.ntb_awards_border{
+    color: $active_text_color;
+    @include borders(solid, 1px, $active_text_color);
+}
+.pet_status{
+    margin: 10px auto;
+    a{
+        @include roboto(12px, $white);
+        @include border-radius(10px);
+        padding: 1px 5px;
+        line-height: 12px;
+        text-decoration: none;
+        &:hover{
+            @include roboto(12px, $white);
+        }
+        &.for_sale{background-color: $status_green;}
+        &.available_for_matting{background-color: $matting_color;}
+        &.give_away{background-color: $header_notifications;}
+        &.lost{background-color: $status_red;}
+        &.rip{background-color: $main_font_color;}
+        &.none{
+            background-color: $white;
+            color: $main_font_color;
+        }
+    }
+}
+
+.edit_buttons{
+    /*position: relative;*/
+    i{
+        padding: 5px;
+        text-align: center;
+    }
+    .trash{background-color: $status_red;}
+    .public{background-color: $active_edit_mode;}
+    .unpublic{background-color: $active_edit_mode;}
+    .plus{background-color: $status_red;}
+
+    .documents_button{
+        @include circle(solid, 1px, $dropdown_border);
+        color: $active_text_color;
+        &.trash, &.public{
+            color: $white;
+            border: 2px solid $white;
+        }
+    }
+}
+.add_button{
+    border-radius: 10px;
+    background-color: #F15A24;
+    padding: 1px 15px;
+    color: #FFF;
+    border: none;
+}
+
+.tag_button{
+    @include roboto(12px, $main_font_color);
+    @include border-radius(10px);
+    @include borders(solid, 1px, $dropdown_border);
+    padding: 0 10px;
+    margin: 0 5px 10px 0;
+    display: inline-block;
+    position: relative;
+    &:first-of-type{
+        color: $white;
+        background-color: $active_text_color;
+        border: none;
+    }
+    &.add{
+        @include border-radius(10px);
+        background-color: $active_edit_mode;
+        padding: 1px 15px;
+        color: $white;
+        border: none;
+    }
+}

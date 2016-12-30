@@ -1,0 +1,236 @@
+.network{
+    .thumbnail{
+        text-align: center;
+        border: none;
+    }
+    .caption{
+        a{
+            font-size: 12px;
+        }
+    }
+    .image_with_flag, .professions{
+        margin: 0 auto;
+    }
+    .image_with_flag{
+        &.normal{
+            @include max_width(86px);
+            margin-bottom: 8px;
+            >img{
+                @include max_width(86px);
+            }
+        }
+    }
+    .professions{
+        margin-bottom: 10px;
+        p{
+            margin-bottom: 5px;
+        }
+        img{
+            @include max_width(20px);
+        }
+    }
+    .network{
+        position: relative;
+        border-top: solid 1px $dropdown_border;
+        nav{
+            @include absolute_center();
+            @include max_width(250px);
+            top: -35px;
+        }
+        .relative{
+            position: relative;
+        }
+    }
+    .network_tabs{
+        margin-top: 50px;
+        .matting_dog{
+            margin-right: 5px;
+        }
+        .table{
+            border-top: 1px solid $dropdown_border;
+            margin-top: 10px;
+            td{
+                position: relative;
+                vertical-align: top;
+                .table_head{
+                    position: absolute;
+                    top: -10px;
+                }
+            }
+        }
+        .puppies_for_sale{
+            .table{
+                border: none;
+            }
+        }
+        .recognitions{
+            td{
+                vertical-align: baseline;
+                text-align: center;
+            }
+            p{
+                 text-align: center;
+            }
+            .left_25{
+                left: 25px !important;
+            }
+            table{
+                &.shorter_border{
+                    border: none;
+                    position: relative;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        width: 850px;
+                        left: 60px;
+                        border-bottom: 1px solid $dropdown_border;
+                    }
+                }
+            }
+        }
+    }
+    .table-responsive{
+        .hearth_date{
+            .fa.fa-birthday-cake{
+                color: $active_text_color;
+            }
+        }
+        .table_head_name{
+            width: 164px !important;
+        }
+        .table_head_country{
+            width: 150px !important;
+            .smallest{
+                width: 75px;
+            }
+        }
+        .table_head_sex{
+            text-align: center;
+            width: 50px !important;
+        }
+        .table_head_birthday,
+        .table_head_awards{
+            text-align: center;
+            width: 80px !important;
+        }
+        .table_head_awards{
+            span{
+                @include roboto(22px, $dropdown_border);
+            }
+        }
+        .table_head_males{
+            text-align: center;
+            width: 80px;
+            span{
+                @include roboto(22px, $dropdown_border);
+            }
+        }
+        .table_head_females{
+            width: 100px;
+            text-align: center;
+            span{
+                @include roboto(22px, $dropdown_border);
+            }
+        }
+        .table_head_status {
+            text-align: center;
+            width: 75px !important;
+            @include roboto_light(10px, $white);
+            background-color: $matting_color;
+            @include border-radius(10px);
+        }
+        .table_head_generation,
+        .table_head_total{
+            text-align: center;
+            width: 80px;
+            @include roboto_bold(22px, $dropdown_border);
+        }
+        .table_head_race,
+        .table_head_profession,
+        .table_head_search{
+            text-align: center;
+            width: 100px !important;
+        }
+        .for_sale{
+            padding-top: 5px;
+            span{
+                @include roboto_light(9px, $white);
+                background-color: $status_green;
+                @include border-radius(10px);
+                padding: 1px 8px;
+            }
+        }
+        .table_head_60{
+            width: 60px !important;
+        }
+        .table_head_110{
+            width: 110px !important;
+        }
+    }
+    .table-responsive>.table>tbody>tr>td {
+        white-space: normal;
+    }
+    .recognitions_trophy {
+        .hearth_date{
+            span:first-of-type{
+                padding: 8px 12px !important;
+            }
+        }
+        i{
+            color: $active_text_color;
+        }
+        text-align: center;
+        .titles_number{
+            display: block;
+            @include roboto_bold(25px, $male_dog_background);
+        }
+        .trophy_info{
+            @include roboto_condensed_light(12px, $active_text_color);
+            @include border-radius(10px);
+            background-color: $active_background;
+            padding: 0 5px;
+            margin-top: 10px;
+        }
+    }
+    .tab-content {
+        .matting_dog {
+            margin-right: 5px;
+        }
+    }
+    .add_dog{
+        padding: 0;
+        margin-bottom: 22px;
+        display: inline-block;
+        vertical-align: top;
+        width: 190px;
+        a{
+            @include border-radius(50%);
+            background-color: $active_edit_mode;
+            color: $white;
+            padding: 3px 11px;
+            font-size: 36px;
+        }
+        span{
+            @include roboto(12px, $active_edit_mode);
+            margin-left: 10px;
+            vertical-align: super;
+        }
+    }
+}
+.edit{
+    .network{
+        .matting_connections{
+            a{
+                padding: 3px 6px !important;
+                i{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .scheduling_dates{
+            p{
+                text-align: center;
+            }
+        }
+    }
+}

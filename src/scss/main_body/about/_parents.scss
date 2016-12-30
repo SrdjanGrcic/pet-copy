@@ -1,0 +1,128 @@
+.parents_network {
+    .parents {
+        position: relative;
+        border-top: 1px solid $dropdown_border;
+        padding: 25px 0 25px 20px;
+        > div > span {
+            @include roboto(11px, $active_text_color);
+            @include border-radius(10px);
+            @include borders(solid, 1px, $dropdown_border);
+            position: absolute;
+            top: -9px;
+            left: 0;
+            padding: 1px 15px;
+            background-color: $right_side_background;
+        }
+        .father,
+        .mother {
+            .matting_dog,
+            .matting_dog_data {
+                display: inline-block;
+            }
+            .matting_dog_data {
+                @include max_width(100px);
+                vertical-align: middle;
+                p {
+                    margin: 0;
+                }
+                a {
+                    @include roboto(10px, $active_text_color);
+                    @include borders(style, 1px, $right_side_background);
+                    @include border-radius(10px);
+                    background-color: $right_side_background;
+                    padding: 1px 5px;
+                    &:hover {
+                        @include borders(style, 1px, $active_text_color);
+                        background-color: $active_text_color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .general_networks {
+        text-align: center;
+        div {
+            padding: 0 !important;
+        }
+        a {
+            @include border-radius(50%);
+            @include borders(solid, 1px, $dropdown_border);
+            color: $active_text_color;
+            background-color: $white;
+        }
+        p {
+            @include roboto(11px, $active_edit_mode);
+            margin-top: 5px;
+        }
+    }
+}
+.edit {
+    .parents_network {
+        .parents {
+            position: relative;
+            border-top: 1px solid $dropdown_border;
+            padding: 25px 0;
+            span {
+                @include roboto(11px, $active_text_color);
+                @include border-radius(10px);
+                @include borders(solid, 1px, $dropdown_border);
+                position: absolute;
+                top: -9px;
+                left: 0;
+                padding: 1px 15px;
+                background-color: $right_side_background;
+            }
+            .father {
+                .circle {
+                    @include borders(solid, 3px, $male_dog_background);
+                }
+            }
+            .mother {
+                .circle {
+                    @include borders(solid, 3px, $female_dog_background);
+                }
+            }
+            .father, .mother {
+                text-align: center;
+                img {
+                    @include max_width(62px);
+                    vertical-align: top;
+                }
+                div {
+                    display: inline-block;
+                    text-align: center;
+                    margin-top: 8px;
+                    a {
+                        @include border-radius(50%);
+                        font-size: 23px;
+                        padding: 3px 7px;
+                        background-color: $active_edit_mode;
+                        color: $white;
+                    }
+                    p {
+                        @include roboto(12px, $active_edit_mode);
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+        .general_networks {
+            a {
+                @include borders(solid, 1px, $inactive_background);
+                background-color: $inactive_background;
+                color: $inactive_text_color;
+                &:hover {
+                    @include borders(solid, 1px, $active_edit_mode);
+                    background-color: $active_edit_mode;
+                    color: $white;
+                }
+                &:last-of-type {
+                    @include borders(solid, 1px, $active_edit_mode);
+                    background-color: $active_edit_mode;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

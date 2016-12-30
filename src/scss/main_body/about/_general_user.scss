@@ -1,0 +1,105 @@
+.general_user{
+    .share_with_us{
+        background-color: $right_side_background;
+        min-height: 120px;
+        padding: 10px;
+        p{
+            border-bottom: 2px solid $dropdown_border;
+        }
+        .active_buttons{
+            padding-top: 0;
+            text-align: right;
+            a{
+                &:hover{
+                    span, i{
+                        color: $active_edit_mode;
+                    }
+                }
+            }
+        }
+    }
+    p{
+        @include roboto(12px, $main_font_color);
+    }
+    label{
+        @include roboto_condensed_light(12px, $main_font_color);
+    }
+    input,
+    select,
+    textarea,
+    .input-group-addon{
+        @include roboto_bold(13px, $inactive_text_color);
+        @include box-shadow(0, 0, 0, 0);
+        border: none;
+        border-bottom: 2px solid $dropdown_border;
+        border-radius: 0;
+        padding: 3px 3px;
+        background-color: transparent;
+        &[disabled]{
+            background-color: transparent;
+        }
+    }
+    select{
+        padding: 3px 0;
+    }
+    .form-control{
+        height: 24px;
+    }
+    .about_col{
+        padding-top: 10px;
+        textarea{
+            @include borders(solid, 2px, $inactive_text_color);
+            @include border-radius(10px);
+        }
+    }
+}
+.edit{
+    .general_user{
+        .general_networks{
+            a{
+                @include borders(solid, 1px, $inactive_background);
+                background-color: $inactive_background;
+                color: $inactive_text_color;
+                &:hover{
+                    @include borders(solid, 1px, $active_edit_mode);
+                    background-color: $active_edit_mode;
+                    color: $white;
+                }
+            }
+        }
+        label{
+            @include roboto_condensed_light(12px, $active_edit_mode);
+            &.turn_of{
+                color: $main_font_color;
+            }
+        }
+        input,
+        select,
+        textarea,
+        .input-group-addon{
+            @include roboto_bold(13px, $active_edit_mode);
+            border-bottom: 2px solid $active_edit_mode;
+            &:focus, &:active{
+                outline: none;
+                @include box-shadow(0, 0, 0, 0);
+            }
+        }
+        textarea{
+            @include placeholder($active_edit_mode);
+            background-color: $right_side_background;
+        }
+        .form-control{
+            &.turn_of{
+                border-bottom: 2px solid $dropdown_border;
+                background-color: transparent;
+                color: $inactive_text_color;
+            }
+        }
+        .about_col{
+            textarea{
+                @include borders(solid, 2px, $active_edit_mode);
+            }
+        }
+
+    }
+}

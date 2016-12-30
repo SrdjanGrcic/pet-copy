@@ -1,0 +1,155 @@
+#header{
+    .general_notification{
+        @include min_width(340px);
+        right: 0;
+        padding: 20px 0;
+        .notification_category{
+            position: relative;
+            >a{
+                @include roboto(11px, $main_font_color);
+                display: block;
+                height: 56px;
+                padding-left: 38px;
+            }
+            .general_left{
+                @include max_width(45px);
+                display: inline-block;
+                margin-right: 8px;
+                vertical-align: top;
+            }
+            .general_center{
+                @include max_width(230px);
+                display: inline-block;
+                padding: 0 10px;
+            }
+            &.mention{
+                .general_left{
+                    vertical-align: middle;
+                }
+            }
+            &.comment,
+            &.like,
+            &.request_client,
+            &.reviews,
+            &.endorse,
+            &.family_request,
+            &.new_puppies,
+            &.change_status{
+                a{
+                    padding-top: 10px;
+                    height: 75px;
+                }
+                .message, .name_client, .surname{
+                    @include max_width(177px);
+                    display: inline-block;
+                }
+                .time{
+                    @include max_width(30px);
+                    display: inline-block;
+                    text-align: right;
+                    vertical-align: top;
+                    font-weight: 800;
+                }
+                .new_photo{
+                    @include max_width(45px);
+                }
+                .check{
+                    border: 2px solid $status_green;
+                    border-radius: 50%;
+                    font-size: 6px;
+                    padding: 1px 5px;
+                    &.active{
+                        background-color: $status_green;
+                    }
+                }
+            }
+            &.reviews, &.endorse, &.family_request{
+                @include roboto(11px, $main_font_color);
+                padding: 0 0 0 38px;
+                a{
+                    height: 35px;
+                }
+                .general_center{
+                    @include max_width(242px);
+                    padding: 0;
+                    margin-bottom: 19px;
+                    display: inline-block;
+                    .img_flag{
+                        @include max_width(35px);
+                        display: inline-block;
+                        margin-right: 3px;
+                        .abs_circle{
+                            top: 27px;
+                            right: -6px;
+                        }
+                    }
+                }
+                .time{
+                    vertical-align: middle;
+                }
+                .message{
+                    @include max_width(270px);
+                    margin-bottom: 5px;
+                }
+            }
+            &.new_puppies{
+                .general_center{
+                    @include max_width(185px);
+                    text-align: right;
+                    padding-right: 6px;
+                    .message{
+                        text-align: left;
+                        i{
+                            color: $status_red;
+                            padding: 3px 3px;
+                            background-color: $white;
+                            border-radius: 50%;
+                            text-align: center;
+                        }
+                    }
+                }
+                .general_left{
+                    margin: 0;
+                }
+            }
+            &.change_status{
+                .general_left{
+                    margin: 0;
+                }
+                .general_center{
+                    @include max_width(75px);
+                    padding: 0 5px;
+                    .dog_title{
+                        @include roboto_condensed_light(11px, $main_font_color);
+                        word-break: break-all;
+                        display: inline-block;
+                    }
+                }
+                .general_right{
+                    @include max_width(115px);
+                    padding: 0;
+                    margin-top: 10px;
+                    .new_status{
+                        @include roboto_light(9px, $white);
+                        background-color: $matting_color;
+                        padding: 1px 5px;
+                        border-radius: 10px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .general_right{
+                @include max_width(20px);
+                display: inline-block;
+                padding: 0 10px;
+            }
+            &:after{
+                content: '';
+                @include absolute_center();
+                bottom: 0;
+                width: 290px;
+                border-bottom: 2px solid $dropdown_border;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "pet-2-net",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.43"
+  },
+  "devDependencies": {},
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+}

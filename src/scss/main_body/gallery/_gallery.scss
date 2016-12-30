@@ -1,0 +1,193 @@
+.gallery{
+    .featured_albums_body{
+
+        .gallery_cursor{
+            div{
+                padding: 0;
+            }
+            a{
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background: $white;
+                @include border-radius(10px);
+                padding: 1px 7px;
+                text-decoration: none;
+                    span{
+                        @include roboto_bold(12px, $main_font_color);
+                    }
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+    input {
+        border: none;
+        outline: none;
+        max-width: 40px;
+        color: $inactive_text_color;
+    }
+    .fa-search {
+        font-size: 12px;
+        color: $inactive_text_color;
+    }
+    .albums {
+        td {
+            padding: 0;
+        }
+        .pull-right {
+            margin: -3px;
+        }
+        .albums_body {
+            padding-right: 10px;
+            &.inactive_album{
+                -webkit-filter: opacity(30%);
+                filter: opacity(30%);
+            }
+            .albums_heading {
+                max-width: 171px;
+                @include borders(solid, 1px, $right_side_background);
+                border-bottom: 0;
+                @include border-radius(10px 10px 0 0);
+                padding: 5px 0 2px 0;
+                span {
+                    @include roboto_light(12px, $main_font_color);
+                }
+                .albums_heading_span {
+                    padding-left: 5px;
+                }
+                .albums_year_span {
+                    float: right;
+                    padding-right: 5px;
+                }
+            }
+            &.active_album{
+                .albums_heading_span{
+                    @include roboto_bold(12px, $active_text_color);
+                }
+            }
+            .active_buttons{
+                max-width: 171px;
+                @include border-radius(0 0 10px 10px);
+                display: block;
+                text-align: center;
+                background-color: $right_side_background;
+                padding: 5px 0 5px 0;
+                .like_button{
+                    background-color: transparent;
+                    @include borders(solid, 1px, $dropdown_border);
+                    span{
+                        color: $active_edit_mode;
+                        &:first-of-type{
+                            border-right: 1px solid $dropdown_border;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 981px){
+                .network{
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+    .filters{
+        .tags{
+            padding: 0;
+            a{
+                margin-right: 10px;
+                &:first-of-type{
+                    color: $main_font_color;
+                    background-color: $white;
+                    @include borders(solid, 1px, $dropdown_border);
+                }
+            }
+            .add{
+                padding: 1px 33px;
+            }
+        }
+        select{
+            @include border-radius(10px);
+            background-color: $right_side_background;
+            outline: none;
+            padding: 1px 5px;
+            width: inherit !important;
+            margin: 0 10px 10px 0;
+        }
+    }
+    .results {
+        .pull-right {
+            margin: -3px;
+        }
+        .results_body {
+            background-color: $right_side_background;
+        }
+        img{
+            padding: 5px;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+        ul{
+            list-style: none;
+            li{
+                display: inline-block;
+            }
+        }
+    }
+}
+.edit{
+    .gallery{
+        .albums_body{
+            .albums_heading{
+                border: none;
+                border-radius: 0;
+                padding: 0;
+            }
+            .create_album{
+                width: 170px;
+                height: 124px;
+                @include borders(solid, 1px, $active_edit_mode);
+                .center_icons_create{
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                }
+            }
+            .center_icons_edit{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 120px;
+                .fa-trash:hover{
+                    @include borders(solid, 2px, $white);
+                }
+            }
+        }
+        .results{
+            .drop_photo{
+                border: 1px dashed #B3B3B3;
+                width: 100%;
+                height: 160px;
+                overflow: auto;
+                .add_photos{
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                    div{
+                        padding-top: 10px;
+                        span{
+                            @include roboto(12px, $active_edit_mode);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

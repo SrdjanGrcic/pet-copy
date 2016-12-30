@@ -1,0 +1,49 @@
+/*.documents{
+    .documents_body{
+        table{
+            td{
+                a{
+                    @include circle(solid, 1px, $dropdown_border);
+                    color: $active_text_color;
+                    padding: 3px 5px;
+                }
+            }
+        }
+    }
+}*/
+edit{
+    .documents{
+        .documents_body{
+            table{
+                th{
+                    color: $dropdown_border;
+                    text-decoration: underline;
+                    span{
+                        @include roboto(12px, $active_edit_mode);
+                    }
+                }
+                td{
+                    a{
+                        @include circle(solid, 1px, $dropdown_border);
+                        color: $active_text_color;
+                        padding: 3px 5px;
+                    }
+                    &:nth-of-type(5){
+                        a{
+                            border: none;
+                            color: $white;
+                            background-color: $active_edit_mode;
+                        }
+                    }
+                    &:nth-of-type(6){
+                        a{
+                            border: none;
+                            color: $white;
+                            background-color: $status_red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+#main{
+  .about {
+      .general_user.kennel_general {
+          .name {
+              @include roboto_bold(20px, $main_font_color);
+              border: none;
+              padding-bottom: 12px;
+          }
+          .founded {
+              @include roboto_light(12px, $more_font_color);
+              border: none;
+              padding-bottom: 12px;
+          }
+          .race {
+              @include roboto_light(12px, $white);
+              border: none;
+              @include border-radius(10px);
+              background-color: $kennel_background;
+              text-align: center;
+              max-width: 160px;
+              margin-top: -5px;
+          }
+      }
+      .my_container label{
+          padding-top: 5px;
+      }
+      .interested_in_user .tags a:first-of-type {
+          color: $white;
+      }
+      .team_tags {
+          margin: 8px;
+          a {
+              @include roboto_light(12px, $main_font_color);
+              @include border-radius(10px);
+              @include borders(solid, 1px, $dropdown_border);
+              padding: 0 10px;
+              margin-right: 5px;
+              display: inline-block;
+              position: relative;
+          }
+      }
+  }
+}
+

@@ -1,0 +1,54 @@
+.main_menu{
+    margin: 50px auto 34px;
+    &.kennel{
+        li{
+            max-width: 102px;
+        }
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            display: inline-block;
+            width: 16%;
+            max-width: 150px;
+            text-align: center;
+            border-right: 1px solid $central_menu_font;
+            &:last-of-type{
+                border: none;
+            }
+            a{
+                font-weight: 800;
+                &:hover, &.active{
+                    .nav_icon{
+                        background-color: $active_background;
+                    }
+                    i, .nav_name{
+                        color: $active_text_color !important;
+                    }
+                }
+                .nav_icon, .nav_name{
+                    display: block;
+                }
+            }
+        }
+    }
+    .nav_icon{
+        background-color: $inactive_background;
+        text-align: center;
+        margin: 0 auto;
+        padding: 8px;
+        &.circle{
+            @include max_width(43px);
+        }
+        i{
+            color: $inactive_text_color;
+            font-size: 23px;
+        }
+    }
+    .nav_name{
+        @include roboto(12px, $central_menu_font);
+        margin-top: 2px;
+    }
+}

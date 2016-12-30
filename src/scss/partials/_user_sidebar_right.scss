@@ -1,0 +1,206 @@
+.sidebar_right{
+    background-color: $right_side_background;
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+    .number_data{
+        text-align: center;
+        padding-top: 7px;
+        >div{padding: 0;}
+        .number{
+            @include roboto_bold(15px, $main_font_color);
+            margin: 0;
+            line-height: 0.8;
+        }
+        .number_category{
+            @include roboto_light_italic(11px, $main_font_color);
+            margin: 0;
+        }
+    }
+    .right_menu{
+        @include borders(solid, 1px, $dropdown_border);
+        @include border-radius(10px);
+        @include roboto(11px, $active_text_color);
+        background-color: $right_side_background;
+        text-align: center;
+    }
+    .dm-img-content{
+        >img{
+
+
+        }
+    }//SMISLITI NESTO UMESTO OVOG
+    .dm-user-data{
+        @include max_width(100px);
+        @include roboto(12px, $main_font_color);
+        margin-top: 2px;
+        p{line-height: 12px;}
+    }
+    .following,
+    .followers,
+    .visitors,
+    .personal_network,
+    .bottom_part{
+        padding: 35px 0 0 18px;
+        width: 254px;
+        .user_professions{
+            margin-bottom: 18px;
+        }
+        .following_data,
+        .personal_network_data,
+        .bottom_part_data{
+            position: relative;
+            padding-top: 20px;
+            .right_menu{
+                @include absolute_center();
+                &.head{
+                    @include max_width(90px);
+                    background-color: $white;
+                    top: -10px;
+                }
+            }
+            &:first-of-type{
+                border-top: 1px solid $dropdown_border;
+                padding-top: 37px;
+            }
+        }
+    }
+    .recommended_for_you,
+    .mutual,
+    .clients{
+        width: 254px;
+        padding: 35px 0 0 18px;
+        .user_professions{
+            margin-bottom: 18px;
+        }
+        .recommended_for_you_data,
+        .mutual_data,
+        .clients_data{
+            position: relative;
+            padding-top: 20px;
+            .right_menu{
+                @include absolute_center();
+                &.head{
+                    @include max_width(160px);
+                    background-color: $white;
+                    top: -10px;
+                }
+            }
+            &:first-of-type{
+                border-top: 1px solid $dropdown_border;
+                padding-top: 36px;
+            }
+            .dm-user-data{
+                >img{vertical-align: top;}
+            }
+        }
+    }
+    .mutual{
+        .dm-follow{
+            display: none;
+        }
+    }
+    .personal_network{
+        .user_professions{
+            display: inline-block;
+            margin-bottom: 0;
+        }
+        .personal_network_data{
+            padding: 20px 0 13px;
+            border-bottom: 1px solid #ccc;
+            &:first-of-type{
+                padding: 31px 0 13px;
+            }
+            .right_menu{
+                &.head{
+                    @include absolute_center();
+                    @include max_width(160px);
+                    top: -10px;
+                }
+            }
+            .dm-img-content{
+                @include max_width(54px);
+                border-right: 1px solid #ccc;
+                vertical-align: inherit;
+                .business_icons{
+                    text-align: left;
+                    margin-left: -3px;
+                    img{
+                        @include max_width(41px);
+                        @include border-radius(50%);
+                        border: none;
+                    }
+                }
+            }
+            .right_menu{
+                &.foot{
+                    @include max_width(62px);
+                    margin: 0;
+                    bottom: -10px;
+                    left: -12px;
+                }
+            }
+        }
+        .add_more{
+            @include roboto(12px, $active_edit_mode);
+            background-color: transparent;
+            margin: 0 auto;
+            display: none;
+            border: none;
+            box-shadow: none;
+            &:focus{
+                outline: none;
+            }
+            &:hover, &:active{
+                background-color: transparent;
+                color: $active_edit_mode;
+            }
+        }
+        &.edit{
+            .add_business{
+                &.circle{
+                    border-color: $active_edit_mode;
+                    background-color: $active_edit_mode;
+                    text-align: center;
+                    padding: 12px;
+                    i{
+                        font-size: 25px;
+                        background-color: transparent;
+                        color: $right_side_background;
+                    }
+
+                }
+                i{
+                    font-size: 57px;
+                    background-color: transparent;
+                    color: $active_edit_mode;
+                    vertical-align: middle;
+                }
+            }
+            .business_data{
+
+            }
+            .dm-user-data{
+                p, button{ display: none; }
+                input{
+                    @include max_width(100px);
+                    background-color: transparent;
+                    border: none;
+                    display: block;
+                }
+                label{ display: inline-block }
+            }
+            .dm-user-data-content{
+                img, span{ display: none; }
+            }
+            .dm-follow{ display: none; }
+            .add_more{ display: block; }
+        }
+    }
+    .bottom_part_data{
+        &:first-of-type{
+            border-top: 1px solid $dropdown_border;
+            padding-top: 35px;
+        }
+    }
+}

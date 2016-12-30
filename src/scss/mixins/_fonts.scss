@@ -1,0 +1,55 @@
+@mixin roboto ($size, $color) {
+    font-family: $Roboto;
+    color: $color;
+    font-size: $size;
+}
+
+@mixin roboto_bold ($size, $color) {
+    font-family: $Roboto;
+    color: $color;
+    font-size: $size;
+    font-weight: 800;
+}
+
+@mixin roboto_light ($size, $color, $family: $Roboto){
+    font-family: $family;
+    color: $color;
+    font-size: $size;
+    font-weight: 100;
+}
+
+@mixin roboto_light_italic ($size, $color, $family: $Roboto){
+    font-family: $family;
+    color: $color;
+    font-size: $size;
+    font-weight: 100;
+    font-style: italic;
+}
+
+@mixin roboto_condensed ($size, $color) {
+    font-family: $RobotoCondensed;
+    color: $color;
+    font-size: $size;
+}
+
+@mixin roboto_condensed_bold ($size, $color) {
+    font-family: $RobotoCondensed;
+    color: $color;
+    font-size: $size;
+    font-weight: 800;
+}
+
+@mixin roboto_condensed_light ($size, $color) {
+    font-family: $RobotoCondensed;
+    color: $color;
+    font-size: $size;
+    font-weight: 100;
+}
+
+@mixin roboto_condensed_light_italic ($size, $color) {
+    font-family: $RobotoCondensed;
+    color: $color;
+    font-size: $size;
+    font-weight: 100;
+    font-style: italic;
+}

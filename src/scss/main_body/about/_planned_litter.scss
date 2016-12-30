@@ -1,0 +1,65 @@
+.planned_litter{
+    .table-responsive{
+        border: 0;
+        td{
+            vertical-align: middle;
+            padding-top: 8px;
+            padding-bottom: 0;
+            white-space: normal !important;
+            &:first-of-type{
+                text-align: center;
+                p{
+                    @include roboto(12px, $status_red);
+                    margin-bottom: 0
+                }
+            }
+            &:last-of-type{
+                padding: 5px 0 0;
+                width: 85px !important;
+                text-align: center;
+            }
+            .matting_dog_data,
+            .owner_matting_dog{
+                p{
+                    margin-bottom: 2px;
+                }
+            }
+            .hearth_date{
+                width: 80px;
+                span:last-of-type{
+                    @include max_width(80px);
+                    margin: auto;
+                }
+            }
+            .professions{
+                >p{
+                    margin-bottom: 5px;
+                }
+                &.normal{
+                    img{
+                        @media screen and (max-width: 1200px) {
+                            @include max-width(18px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.edit{
+    .planned_litter{
+        .table-responsive{
+            td{
+                white-space: normal !important;
+                vertical-align: middle;
+                &:first-of-type{
+                    text-align: center;
+                    p{
+                        @include roboto(12px, $status_red);
+                        margin-bottom: 0
+                    }
+                }
+            }
+        }
+    }
+}

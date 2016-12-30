@@ -1,0 +1,18 @@
+.div_overflow{
+    overflow: hidden;
+}
+.display_inline{
+    display: inline-block;
+}
+.interested_in_user{
+    .tags{
+        a{
+            margin: 5px;
+        }
+    }
+}
+.expander{
+    height: 2em;
+    overflow: hidden;
+    cursor: pointer;
+}

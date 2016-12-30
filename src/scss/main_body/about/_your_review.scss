@@ -1,0 +1,73 @@
+.your_review{
+    h4{
+        height: 16px;
+        margin: 0 !important;
+    }
+    h3{
+        color: $active_edit_mode !important;
+        padding: 0 !important;
+        span:first-of-type{
+            color: $main_font_color;
+        }
+    }
+    textarea{
+        @include border-radius(10px);
+        @include borders(solid, 1px, $right_side_background);
+        @include placeholder($active_edit_mode);
+        @include box-shadow(0, 0, 0, 0);
+        &:active, &:focus{
+
+        }
+    }
+    .rating_stars{
+        background-color: transparent;
+        padding: 0 5px;
+        margin-left: 15px;
+        a{
+            font-size: 12px;
+            color: $more_font_color;
+            &.active{
+                color: $yellow_stars;
+            }
+            &:active, &:focus{
+                outline: none;
+                text-decoration: none;
+            }
+        }
+        &.head{
+            padding: 1px 15px;
+            position: absolute;
+            top: -17px;
+            right: 0;
+        }
+        &.review{
+            @include borders(solid, 1px, $dropdown_border);
+            @include border-radius(10px);
+        }
+    }
+    .your_review_holder{
+        position: relative;
+        .heading{
+            @include roboto(11px, $active_text_color);
+            @include borders(solid, 1px, $dropdown_border);
+            @include border-radius(10px);
+            padding: 0 15px;
+            position: absolute;
+            top: -17px;
+            left: 0;
+        }
+    }
+    .matting_dog{
+        @include max_width(45px);
+        display: inline-block;
+        img{@include max_width(45px);}
+        .flag{@include max_width(18px);}
+    }
+    .owner_matting_dog{
+        display: inline-block;
+        p{
+            margin: 0;
+        }
+        img{@include max_width(18px);}
+    }
+}

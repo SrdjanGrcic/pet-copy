@@ -1,0 +1,213 @@
+.familytree{
+    .ftree_container{
+        flex-grow: 1;
+        overflow: auto;
+        justify-content: center;
+        padding: 10px 0;
+        
+        .ftree_wrapper{
+            display: flex;
+        }
+    }
+    
+/*    p{
+        margin: 0;
+        background-color: #fff;
+        color: #00B9AE;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba(#CC8367, 0.22);
+        border: 1px solid black;
+        margin-top: auto;
+    }*/
+    .ftree_item{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        .ftree_item_child{
+            margin-top: $bottom-margin;
+            position: relative;
+            display: flex;
+            justify-content: center;      
+            &:before{
+                position: absolute;
+                content: '';
+                width: $line-width;
+                height: $bottom-margin / 3;//was /2
+                top: 0;
+                left: 49%;
+                background-color: $line-color;
+                transform: translateY(-145%);//was 100%
+            }
+            &:after{    //Added for second line
+                position: absolute;
+                content: '';
+                width: $line-width;
+                height: $bottom-margin / 3;
+                top: 0;
+                left: 51%;  //and changed, was 50%
+                background-color: $female_dog_background;
+                transform: translateY(-135%);
+            }
+            
+            .parent_note{
+                &:before, &:after{
+                    position: absolute;
+                    border: 1px solid $male_dog_background;
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 0px 7px;
+                    top: -59%;
+                    @media only screen and (min-width:1201px) {
+                        top: -37%;
+                    }
+                }
+                &:before{
+                    content: 'Father';
+                    right: 150%;
+                }
+                &:after{
+                    content: 'Mother';
+                    left: 150%;
+                }
+            }
+            .grandparent_note{
+                position: relative;
+                &:before, &:after{
+                    position: absolute;
+                    top: -320%;
+                    border: 1px solid $male_dog_background;
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 0px 7px;
+                }
+                &:before{
+                    content: 'Grandparents';
+                    @media only screen and (min-width:1201px) {
+                        top: -260%;
+                        right: 290%;
+                    }
+                    right: 307%;
+                }
+                &:after{
+                    content: 'Grandparents';
+                    @media only screen and (min-width:1201px) {
+                        top: -260%;
+                        left: 290%;
+                    }
+                    left: 307%;
+                }
+            }
+            
+            .move_right{
+                position: absolute;
+                left: 55px;
+                top: 10px;
+                @media only screen and (min-width:1201px) {
+                    left: 80px;
+                }
+        }
+        }
+        .ftree_item_parents{
+            display: flex;
+            justify-content: center;
+            .ftree_item_single_parent{
+                padding: 0 10px;//sirina stabla
+                position: relative;
+                display: flex;
+                margin-top: auto;
+                
+                &:before, &:after{
+                    content: '';
+                    position: absolute;
+                    background-color: $line-color;
+                    left: 2%;//was 0
+                }
+
+                &:before{
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateY(100%);
+                    width: $line-width;
+                    height: $bottom-margin / 2;
+
+                }
+                
+                &:after{
+                    bottom: -$bottom-margin / 2;
+                    transform: translateY(100%);
+                    height: $line-width;
+                    width: 100%;
+                }
+                
+                &:first-child:before{
+                    background-color: $male_dog_background;
+                }
+                &:first-child:after{
+                    left: 50%;
+                    width: 48%;
+                    background-color: $male_dog_background;
+                }
+                
+                &:last-child:before{
+                    background-color: $female_dog_background;
+                }
+                &:last-child:after{
+                    width: calc(48.2% + 1px);//was 50%
+                    background-color: $female_dog_background
+                }        
+
+            }
+        }
+    }
+    .hv-item-parent{
+        &:before{
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: $bottom-margin / 2;
+            top: 0;
+            left: 50%;
+            background-color: $line-color;
+            transform: translateY(-100%);
+        }
+    }
+    .hv-item-child{
+        padding: 0 15px;
+        position: relative;
+
+        &:before, &:after{
+            content: '';
+            position: absolute;
+            background-color: $line-color;
+            left: 0;
+        }
+
+        &:before{
+            left: 50%;
+            bottom: 0;
+            transform: translateY(-100%);
+            width: $line-width;
+            height: $bottom-margin / 2;
+
+        }
+
+        &:after{
+            bottom: -$bottom-margin / 2;
+            transform: translateY(100%);
+            height: $line-width;
+            width: 100%;
+        }
+
+        // Make first & last child`s line width 50%
+        &:first-child:before{
+            left: 50%;
+            width: 50%;
+        }
+
+        &:last-child:before{
+            width: calc(50% + 1px);
+        }        
+
+    }
+}

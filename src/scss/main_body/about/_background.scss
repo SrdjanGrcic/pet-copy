@@ -1,0 +1,86 @@
+.background_data{
+    .background_body{
+        .table-responsive{
+            table{
+                border-top: solid 1px $dropdown_border;
+                tr{
+                    td{
+                        .docs,
+                        .since{
+                            width: 85px !important;
+                        }
+                        .ocupation{
+                            width: 110px !important;
+                        }
+                        .endorsments{
+                            width: 264px !important;
+                        }
+                        .since{
+                            @include roboto_bold(20px, $active_text_color);
+                        }
+                        .number_of_endorse{
+                            @include roboto_bold(20px, $main_font_color);
+                            width: 85px !important;
+                        }
+                    }
+                    .business_icons{
+                        >img{
+                            @include max_width(40px);
+                            @include border-radius(50%);
+                            @include borders(solid, 2px, $right_side_background);
+                            margin-left: 15px;
+                        }
+                        >span{
+                            @include border-radius(10px);
+                            @include borders(solid, 1px, $main_font_color);
+                            @include roboto(11px, $active_text_color);
+                            @include max_width(65px);
+                            display: block;
+                            background-color: $white;
+                            margin: 5px 0 0;
+                            padding: 0 5px;
+                            text-align: center;
+                        }
+                    }
+                    .image_with_flag{
+                        display: inline-block;
+                        margin-right: 5px;
+                        a{
+                            display: inline-block;
+                            @include borders(solid, 2px, $right_side_background);
+                            @include border-radius(50%);
+                            background-color: $active_edit_mode;
+                            padding: 3px 7px;
+                            vertical-align: middle;
+                            i{
+                                font-size: 36px;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.edit{
+    .background_data{
+        .since{
+            padding: 0;
+            .input-group{
+                input,
+                span{
+                    @include box-shadow(0, 0, 0, 0);
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 0;
+                    border-bottom: 2px solid $active_edit_mode;
+                    padding: 0;
+                }
+            }
+            label{
+                @include roboto_condensed_light(13px, $active_edit_mode);
+            }
+        }
+    }
+}

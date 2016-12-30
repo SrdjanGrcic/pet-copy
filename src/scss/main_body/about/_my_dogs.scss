@@ -1,0 +1,43 @@
+.my_dogs{
+    .user_professions{
+        display: inline-block;
+    }
+    h4{margin-bottom: 23px;}
+    .my_dog {
+        display: inline-block;
+        margin-bottom: 15px;
+        .matting_dog,
+        .matting_dog_data {
+            display: inline-block;
+        }
+        .matting_dog_data {
+            @include max_width(100px);
+            vertical-align: middle;
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+.edit{
+    .my_dogs{
+        .add_dog{
+            padding: 0 15px;
+            margin-bottom: 22px;
+            display: inline-block;
+            vertical-align: top;
+            a{
+                @include border-radius(50%);
+                background-color: $active_edit_mode;
+                color: $white;
+                padding: 3px 9px;
+                font-size: 36px;
+            }
+            span{
+                @include roboto(12px, $active_edit_mode);
+                margin-left: 10px;
+                vertical-align: super;
+            }
+        }
+    }
+}

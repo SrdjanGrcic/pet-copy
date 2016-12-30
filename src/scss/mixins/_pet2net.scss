@@ -1,0 +1,53 @@
+@mixin borders ($style, $width: 0, $color: $white) {
+    border: $width $style $color;
+}
+
+@mixin max_width ($max_width, $width: 100%) {
+    width: $width;
+    max-width: $max_width;
+}
+
+@mixin min_width ($min_width, $width: 100%) {
+    width: $width;
+    min-width: $min_width;
+}
+
+@mixin circle ($style, $width: 1px, $color: $white){
+    @include borders($style, $width, $color);
+    @include border-radius(50%);
+}
+
+@mixin border_50_top($top, $left, $width){
+    content: '';
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $width;
+    border-top: 1px solid $white;
+}
+
+@mixin absolute_center(){
+    position: absolute;
+    margin: 0 auto;
+    overflow-x: hidden;
+    left: 0;
+    right: 0;
+}
+
+
+@mixin social_img($background) {
+    width: 25px;
+    border-radius: 50%;
+    background: $background;
+    padding: 1px 5px;
+    margin-right: 3px;
+    text-align: center;
+    display: inline-block;
+}
+
+@mixin placeholder($color){
+    &::-webkit-input-placeholder {color: $color;}
+    &::-moz-placeholder {color: $color;}
+    &:-ms-input-placeholder {color: $color;}
+    &:-moz-placeholder {color: $color;}
+}
